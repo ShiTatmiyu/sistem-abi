@@ -1,0 +1,64 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.col {
+    height: 200px;
+    width: 350px;
+    margin: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.col-admin {
+    background-color: #5B93FF;
+}
+
+.col-guru {
+    background-color: #6CFF69;
+}
+
+.col-murid {
+    background-color: #FF7272;
+}
+
+.col-walimurid {
+    background-color: #FFE600;
+}
+
+.col-data {
+    background-color: #FFE600;
+}
+
+.col-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.col-icon {
+    font-size: 60px;
+}
+
+.col-title {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.col-count {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    align-items: center;
+}

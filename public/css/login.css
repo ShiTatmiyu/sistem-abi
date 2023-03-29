@@ -1,0 +1,71 @@
+body {
+    background-image: url("bg/sib.jpeg");
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+
+a{
+    text-decoration:none !important;
+}
+
+h1,h2,h3 {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.ul {
+    background-color: dodgerblue;
+    display: inline-block;
+    height: 4px;
+    width: 240px;
+    margin-bottom: 15px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    font-size: 25px;
+    margin-bottom: 5pxpx;
+    background-color: transparent;
+    width: 250px;
+}
+
+     
+.myform {
+    top: 50%;    
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3rem;
+    outline: 0;
+    max-width: 500px;
+}
+
+.underline {
+    background-color: gray;
+    display: inline-block;
+    height: 2px;
+    width: 240px;
+    margin-bottom: 2px;
+}
+
+.wrap {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.btn-a {
+    background-color: dodgerblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20;
+    border-radius: 30px;
+    width: 100px;
+    padding: 10px;
+}

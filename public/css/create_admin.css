@@ -1,0 +1,43 @@
+.form-list {
+    margin-left: 10px;
+}
+
+.form-row {
+    margin-top: 20px;
+}
+
+.form-input {
+    width: 600px;
+    height: 40px;
+    border: gray 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.title-page {
+    font-size: 15;
+}
+
+.file-input {
+    padding: 10px;
+    border: gray 3px solid;
+    color: black;
+    border-radius: 10px;
+}
+
+.is-invalid {
+    border-color: red;
+}
+
+@media screen and (max-width: 720px) {
+    .form-list {
+        margin-left: 0;
+    }
+
+    .form-input {
+        width: 400px;
+        height: 30px;
+        font-size: 15px;
+    }
+  } 
