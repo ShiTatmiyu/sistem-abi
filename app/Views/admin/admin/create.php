@@ -15,26 +15,46 @@
                     <?php endif; ?>
                 </div>
                 <div class="form-row">
-                    <p>Password: <br></p>
-                    <input class="form-input" type="text" name="password_admin" autofocus value="<?= old('password_admin'); ?>">
+                    <label for="password">Password : </label><br>
+                    <input class="form-input <?= (isset($errors['password_admin'])) ? 'is-invalid' : ''; ?>" type="text" id="password" name="password_admin" autofocus value="<?= old('password_admin'); ?>">
+                    <br>
+                    <?php if(isset($errors['password_admin'])) : ?>
+                        <span style="color: red;"><?php echo $errors['password_admin'] ?></span>
+                    <?php endif; ?>
                 </div>
                 <div class="form-row">
-                    <p>Email: <br></p>
-                    <input class="form-input" type="email_admin" name="email_admin" autofocus value="<?= old('email_admin'); ?>">
+                    <label for="email">Email : </label><br>
+                    <input class="form-input <?= (isset($errors['email_admin'])) ? 'is-invalid' : ''; ?>" type="email_admin" id="email" name="email_admin" autofocus value="<?= old('email_admin'); ?>">
+                    <br>
+                    <?php if(isset($errors['email_admin'])) : ?>
+                        <span style="color: red;"><?php echo $errors['email_admin'] ?></span>
+                    <?php endif; ?>
                 </div>
                 <div class="form-row">
-                    <p>Nama: <br></p>
-                    <input class="form-input" type="text" name="nama_admin" autofocus value="<?= old('nama_admin'); ?>">
+                    <label for="nama">Nama : </label><br>
+                    <input class="form-input <?= (isset($errors['nama_admin'])) ? 'is-invalid' : ''; ?>" type="text" id="nama" name="nama_admin" autofocus value="<?= old('nama_admin'); ?>">
+                    <br>
+                    <?php if(isset($errors['nama_admin'])) : ?>
+                        <span style="color: red;"><?php echo $errors['nama_admin'] ?></span>
+                    <?php endif; ?>
                 </div>
                 <div class="form-row">
-                    <p>jenis kelamin: <br></p>
-                    <input class="form-input" type="text" name="jenis_kelamin" autofocus value="<?= old('jenis_kelamin'); ?>">
+                    <label for="jenis_kelamin">Jenis Kelamin : </label><br>
+                    <input class="form-input <?= (isset($errors['jenis_kelamin'])) ? 'is-invalid' : ''; ?>" type="text" id="jenis_kelamin" name="jenis_kelamin" autofocus value="<?= old('jenis_kelamin'); ?>">
+                    <br>
+                    <?php if(isset($errors['jenis_kelamin'])) : ?>
+                        <span style="color: red;"><?php echo $errors['jenis_kelamin'] ?></span>
+                    <?php endif; ?>
                 </div>
                 <div class="form-row">
-                    <p>foto profil: <br></p>
-                    <input class="file-input" type="file" name="foto_profil">
+                    <label for="foto_profile">Foto Profil : </label><br>
+                    <input class="file-input <?= (isset($errors['foto_profile'])) ? 'is-invalid' : ''; ?>" type="file" id="foto_profile" name="foto_profil">
+                    <br>
+                    <?php if(isset($errors['foto_profile'])) : ?>
+                        <span style="color: red;"><?php echo $errors['foto_profile'] ?></span>
+                    <?php endif; ?>
                 </div>
-            <button class="btn-submit" type="submit">Register</button>
+            <button class="btn-submit" type="submit">Tambah Data</button>
         </form>
         
 <?= $this->endSection(); ?>

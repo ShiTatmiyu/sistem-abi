@@ -3,7 +3,7 @@
 }
 
 .form-row {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .form-input {
@@ -28,6 +28,15 @@
 
 .is-invalid {
     border-color: red;
+}
+
+.btn-submit {
+    background-color: black;
+    border: 2px gray solid;
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 720px) {

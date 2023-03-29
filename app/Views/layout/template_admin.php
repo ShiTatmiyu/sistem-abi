@@ -46,7 +46,7 @@
                         </div>
                     </li>  
                     <li class="item">
-                        <a href="/data2" class="menu-btn">
+                        <a href="/ibadahad2" class="menu-btn">
                         <i class="fa-solid fa-mosque"></i><span>Data Ibadah</span>
                         </a>
                     </li>

@@ -47,13 +47,14 @@ $routes->get('/admin/create', 'Admin::create_admin', ['filter' => 'AdminFilter']
 $routes->get('/admin/guru/create', 'Admin::create_guru', ['filter' => 'AdminFilter']);
 $routes->get('/admin/murid/create', 'Admin::create_murid', ['filter' => 'AdminFilter']);
 $routes->get('/admin/walimurid/create', 'Admin::create_walimurid', ['filter' => 'AdminFilter']);
+$routes->get('/create-ibadah', 'Admin::create_ibadah', ['filter' => 'AdminFilter']);
 
 // Admin User Index Route
 $routes->get('/admin2', 'Admin::index_admin', ['filter' => 'AdminFilter']);
 $routes->get('/guru2', 'Admin::index_guru', ['filter' => 'AdminFilter']);
 $routes->get('/murid2', 'Admin::index_murid', ['filter' => 'AdminFilter']);
 $routes->get('/walimurid2', 'Admin::index_walimurid', ['filter' => 'AdminFilter']);
-$routes->get('/data2', 'Admin::index_data', ['filter' => 'AdminFilter']);
+$routes->get('/ibadahad2', 'Admin::index_ibadah', ['filter' => 'AdminFilter']);
 
 // Admin User Detail
 $routes->get('admin/detail/(:any)', 'admin::detail_admin/$1', ['filter' => 'AdminFilter']);
@@ -62,9 +63,11 @@ $routes->get('murid/detail/(:any)', 'admin::detail_admin/$1', ['filter' => 'Admi
 
 // Admin User Store
 $routes->post('admin/store', 'admin::save_admin', ['filter' => 'AdminFilter']);
+$routes->post('ibadah/store', 'admin::save_ibadah', ['filter' => 'AdminFilter']);
 
 // Admin User Edit
 $routes->get('/editadm/(:segment)', 'admin::edit_adm/$1', ['filter' => 'AdminFilter']);
+$routes->get('/editib/(:segment)', 'admin::edit_ibadah/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Update
 $routes->post('/updateadm/(:segment)', 'admin::update_adm/$1', ['filter' => 'AdminFilter']);

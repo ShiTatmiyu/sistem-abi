@@ -41,6 +41,100 @@ class Admin extends BaseController
         return view('admin/index', $data);   
     }
 
+    public function index_ibadah()
+    {
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $ibadah = $this->ibadahModel->search($keyword);
+        } else {
+            $ibadah = $this->ibadahModel;
+        }
+
+
+        $data = [
+            'title' => 'Data ibadah',
+            'ibadah' => $this->ibadahModel->getibadah()
+        ];
+
+        return view('/admin/ibadah/index', $data);
+    } 
+
+    public function create_ibadah()
+    {
+        $data = [
+            'title' => 'Create Ibadah',
+            'validation' => \Config\Services::validation(), 
+        ];
+
+        return view('/admin/ibadah/create', $data);
+    }
+
+    public function save_ibadah()
+    {
+        $validation = \Config\Services::validation();
+
+        $validation->setRules([
+            'nama_ibadah' => [
+                'label' => 'Nama Ibadah',
+                'rules' => 'required|is_unique[ibadah.nama_ibadah]',
+                'errors' => [
+                    'required' => 'Nama Ibadah perlu diisi',
+                    'is_unique' => 'Nama Ibadah sudah ada'
+                ]
+            ],
+            'hukum_ibadah' => [
+                'label' => 'Hukum Ibadah',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Hukum Ibadah perlu diisi',
+                ]
+            ],
+            'jadwal_ibadah' => [
+                'label' => 'Jadwal Ibadah',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jadwal Ibadah perlu diisi',
+                ]
+            ],
+        ]);
+        if ($validation->withRequest($this->request)->run())
+        {
+            $this->ibadahModel->save([
+                'nama_ibadah' => $this->request->getVar('nama_ibadah'),
+                'hukum_ibadah' => $this->request->getVar('hukum_ibadah'),
+                'jadwal_ibadah' => $this->request->getVar('jadwal_ibadah'),
+            ]);
+    
+            session()->setFlashdata('add', 'Data Ibadah berhasil dibuat');
+            return redirect()->to('/ibadahad2');
+        }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'errors' => $validation->getErrors(),
+                'title' => 'Create Ibadah'
+                ];
+            return view('/admin/ibadah/create', $data);
+        }
+    }
+
+    public function edit_ibadah($id)
+    {
+        $data = [
+            'title' => 'Edit Admin',
+            'validation' => \Config\Services::validation(),
+            'ibadah' => $this->ibadahModel->getIbadah($id)
+        ];
+
+        return view('/admin/ibadah/edit', $data);
+    }
+
+    public function update_ibadah()
+    {
+
+    }
+
     public function create_admin()
     {
         $data = [
@@ -98,10 +192,10 @@ class Admin extends BaseController
             ],
             'foto_profile' => [
                 'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]|mime_in[image/jpg,image/jpeg,image/png]',
+                'rules' => 'is_image[foto_profil]',
                 'errors' => [
                     'is_image' => 'Data yang diisi buka foto',
-                    'mime_in' => 'Tipe data tidak diizinkan'              
+                    // 'mime_in' => 'Tipe data tidak diizinkan'              
                 ]
             ],
         ]);
@@ -525,13 +619,5 @@ class Admin extends BaseController
         return view('/admin/walimurid/index', $data);
     }
 
-    public function index_data()
-    {
-        $data = [
-            'title' => 'Data Ibadah'
-        ];
-
-        return view('/admin/ibadah/index', $data);
-    }
 
 }
