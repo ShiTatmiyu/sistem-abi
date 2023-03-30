@@ -27,7 +27,14 @@
             <td><?= $ib['nama_ibadah'] ?></td>
             <td><?= $ib['hukum_ibadah'] ?></td>
             <td><?= $ib['jadwal_ibadah'] ?></td>
-            <td><a href="/editib/<?= $ib['id_ibadah'] ?>">Edit</td>
+            <td>
+                <a href="/editib/<?= $ib['id_ibadah'] ?>">Edit</a>
+                <form action="/deleteib/<?= $ib["id_ibadah"] ?>" method="post" class="d-inline">
+                    <?= csrf_field() ?>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="delete-btn" onclick="return confirm('apakah ada ingin menghapus dengan Username = <?= $ib["nama_ibadah"] ?>')">Hapus</a>
+                </form>
+            </td>
         </tr>
     <?php } ?>
     </tbody>

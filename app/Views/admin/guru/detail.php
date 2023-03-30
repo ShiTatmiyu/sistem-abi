@@ -15,7 +15,7 @@
             <form action="/deletegr/<?= $guru["id_guru"] ?>" method="post" class="d-inline">
             <?= csrf_field() ?>
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="delete-btn" onclick="return confirm('apakah ada ingin menghapus dengan Username = <?= $admin["username_admin"] ?>')">Hapus</a>
+                <button type="submit" class="delete-btn" onclick="return confirm('apakah ada ingin menghapus dengan Username = <?= $guru["username_guru"] ?>')">Hapus</a>
             </form>
         </div>
         <a class="back-btn" href="/admin2">Balik ke list</a>

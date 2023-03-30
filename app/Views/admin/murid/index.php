@@ -5,7 +5,7 @@
 
 <h1 class="page-title">Data Murid</h1>
 <div class="d-flex">
-  <a class="btn-create" href="/murid/create">Tambah data</a> 
+  <a class="btn-create" href="/create-murid">Tambah data</a> 
   <div class="search-box">
       <form action="/murid/index_murid" method="post">
       <button class="btn-search" name="submit"><i class="fas fa-search"></i></button>
@@ -19,9 +19,10 @@
       <table>
         <thead>
           <tr>
-            <th>No</th>
-            <th>Foto</th>
+            <th>Nisn</th>
             <th>Username</th>
+            <th>Nama Murid</th>
+            <th>Kelas</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -30,12 +31,12 @@
     <div class="tWrap__body">
       <table>
         <tbody>
-            <?php $no = 1 ?>
         <?php foreach($murid as $ad) { ?>
         <tr>
-            <td><?= $no++ ?></td>
-            <td><img src="/img/<?= $ad['foto_profile'] ?>" class="foto"></td>
+            <td><?= $ad['nisn'] ?></td>
             <td><?= $ad['username_murid'] ?></td>
+            <td><?= $ad['nama_murid'] ?></td>
+            <td><?= $ad['kelas'] ?></td>
             <td>
                 <a class="btn-detail" href="/murid/detail/<?= $ad['nisn'] ?>"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
             </td>

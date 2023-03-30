@@ -5,7 +5,7 @@
 
 <h1 class="page-title">Data Guru</h1>
 <div class="d-flex">
-  <a class="btn-create" href="/admin/create">Tambah data</a> 
+  <a class="btn-create" href="/create-guru">Tambah data</a> 
   <div class="search-box">
       <form action="/admin/index_guru" method="post">
       <button class="btn-search" name="submit"><i class="fas fa-search"></i></button>

@@ -9,7 +9,7 @@
 
 body{
   background: #fff;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .wrapper .header{

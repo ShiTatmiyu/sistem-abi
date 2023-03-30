@@ -130,9 +130,69 @@ class Admin extends BaseController
         return view('/admin/ibadah/edit', $data);
     }
 
-    public function update_ibadah()
+    public function update_ibadah($id)
     {
+        $validation = \Config\Services::validation();
+        $ibadahOld = $this->ibadahModel->getIbadah($id);
 
+        if($ibadahOld['nama_ibadah'] == $this->request->getVar('nama_ibadah')) {
+            $rule_nama = 'required';
+        } else {    
+            $rule_nama = 'required|is_unique[ibadah.nama_ibadah]';
+        };
+
+
+        $validation->setRules([
+            'nama_ibadah' => [
+                'label' => 'Nama Ibadah',
+                'rules' => $rule_nama,
+                'errors' => [
+                    'required' => 'Nama Ibadah perlu diisi',
+                    'is_unique' => 'Nama Ibadah sudah ada'
+                ]
+            ],
+            'hukum_ibadah' => [
+                'label' => 'Hukum Ibadah',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Hukum Ibadah perlu diisi',
+                ]
+            ],
+            'jadwal_ibadah' => [
+                'label' => 'Jadwal Ibadah',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jadwal Ibadah perlu diisi',
+                ]
+            ],
+        ]);
+        if ($validation->withRequest($this->request)->run())
+        {
+            $this->ibadahModel->save([
+                'id_ibadah' => $id,
+                'nama_ibadah' => $this->request->getVar('nama_ibadah'),
+                'hukum_ibadah' => $this->request->getVar('hukum_ibadah'),
+                'jadwal_ibadah' => $this->request->getVar('jadwal_ibadah'),
+            ]);
+    
+            session()->setFlashdata('add', 'Data Ibadah berhasil dibuat');
+            return redirect()->to('/ibadahad2');
+        }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'errors' => $validation->getErrors(),
+                'title' => 'Create Ibadah'
+                ];
+            return view('/admin/ibadah/create', $data);
+        }
+    }
+
+    public function delete_ibadah($id)
+    {
+        $this->ibadahModel->Hapusibadah($id);
+        return redirect()->to('/ibadahad2');
     }
 
     public function create_admin()
@@ -235,33 +295,6 @@ class Admin extends BaseController
                 ];
             return view('/admin/admin/create', $data);
         }
-            
-
-            // $username = $this->request->getPost('username_admin');
-            // $user = $adminModel->where('username_admin', $username);
-            // if (!empty($user)) {
-            //     session()->setFlashdata('unique_admin', 'Username sudah digunakan');
-            //     return redirect()->to('/admin/create')->withinput();
-            // }
-
-            
-        // $info = \Config\Services::image('imagick')
-        // ->withFile($fileFoto)
-        // ->getFile()
-        // ->getProperties(true);
-        
-
-        // $xOffset = ($info['width'] / 2) - 50;
-        // $yOffset = ($info['height'] / 2) - 50;
-            
-        // \Config\Services::image('imagick')
-        // ->withFile($fileFoto)
-        // ->resize(200, 100, true, 'height')
-        // ->crop(100, 100, $xOffset, $yOffset);
-        
-
-
-
     }
 
     public function edit_adm($id)
@@ -277,58 +310,40 @@ class Admin extends BaseController
 
     public function update_adm($id)
     {
+        $validation = \Config\Services::validation();
+
         $adminOld = $this->adminModel->getAdmin($id);
-        if($adminOld['username_admin'] == $this->request->getVar('username')) {
+        if($adminOld['username_admin'] == $this->request->getVar('username_admin')) {
             $rule_username = 'required';
         } else {    
-            $rule_username = 'required|is_unique[
-                admin.username_admin,
-                guru.username_guru,
-                murid.username_murid,
-                walimurid.username_walimurid
-                ]';
+            $rule_username = 'required|is_unique[admin.username_admin]';
         };
 
         if($adminOld['email_admin'] == $this->request->getVar('email')) {
             $rule_email = 'required';
         } else {    
-            $rule_email = 'required|valid_email|is_unique[
-                admin.email_admin,
-                guru.email_guru,
-                murid.email_murid,
-                walimurid.email_walimurid,            
-                ]';
+            $rule_email = 'required|valid_email|is_unique[admin.email_admin]';
         };
 
-        if($adminOld['nama_admin'] == $this->request->getVar('nama')) {
-            $rule_nama = 'required';
-        } else {    
-            $rule_nama = 'required|is_unique[
-                admin.nama_admin,
-                guru.nama_guru,
-                murid.nama_murid,
-                walimurid.nama_walimurid,            
-                ]';
-        };
-
-        
-        if (!$validation([
-            'username' => [
+        $validation->setRules([
+            'username_admin' => [
+                'label' => 'Username',
                 'rules' => $rule_username,
                 'errors' => [
-                    'required' => '{field} Itu harus diisi',
-                    'is_unique' => 'Udh ada yang {field}nya sama'
+                    'required' => 'Username perlu diisi',
+                    'is_unique' => 'Username sudah ada'
                 ]
             ],
-            'password' => [
-                'rules' => 'required|min_length[8]|alpha_numeric_punct',
+            'password_admin' => [
+                'label' => 'Password',
+                'rules' => 'required|min_length[8]',
                 'errors' => [
                     'required' => 'Password perlu diisi',
                     'min_length' => 'Password harus terdiri dari 8 kata',
-                    'alpha_numeric_punct' => 'Password hanya boleh mengandung angka, huruf, dan karakter yang valid'
                 ]
             ],
-            'email' => [
+            'email_admin' => [
+                'label' => 'Email',
                 'rules' => $rule_email,
                 'errors' => [
                     'required' => 'Email perlu diisi',
@@ -336,35 +351,35 @@ class Admin extends BaseController
                     'is_unique' => 'Email sudah ada'                
                 ]
             ],
-            'nama' => [
-                'rules' => $rule_nama,
+            'nama_admin' => [
+                'label' => 'Nama',
+                'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama perlu diisi',
-                    'is_unique' => 'Udh ada yang {field}nya sama'              
+                    'required' => 'Nama perlu diisi'              
                 ]
             ],
             'jenis_kelamin' => [
+                'label' => 'Jenis Kelamin',
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Jenis Kelamin perlu diisi'
                 ]
             ],
-            'foto_profil' => [
-                'rules' => 'is_image[foto_profil]|mime_in[image/jpg,image/jpeg,image/png]',
+            'foto_profile' => [
+                'label' => 'Foto Profil',
+                'rules' => 'is_image[foto_profil]',
                 'errors' => [
                     'is_image' => 'Data yang diisi buka foto',
-                    'mime_in' => 'Tipe data tidak diizinkan'              
+                    // 'mime_in' => 'Tipe data tidak diizinkan'              
                 ]
             ],
-        ]))
-        {
-            $validation = \Config\Services::validation();
-            return redirect()->back()->withinput()->with('validation', $validation);
-        }
+        ]);
 
-        $fileFoto =$this->request->getFile('foto_profil');
-        $getphoto = $this->adminModel->PilihAdmin($id)->getRow();
-        $nama = $getphoto->foto_profile;
+        if ($validation->withRequest($this->request)->run())
+        {
+            $fileFoto =$this->request->getFile('foto_profil');
+            $getphoto = $this->adminModel->Pilihadmin($id)->getRow();
+            $nama = $getphoto->foto_profile;
 
         if($fileFoto->getError() == 4) {
             $namaFoto = $getphoto->foto_profile;
@@ -377,7 +392,7 @@ class Admin extends BaseController
             $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
         }
         else {
-            $getphoto = $this->adminModel->PilihAdmin($id)->getRow();
+            $getphoto = $this->adminModel->Pilihadmin($id)->getRow();
             $photo = $getphoto->foto_profile;
             @unlink(ROOTPATH . 'public/img/'. $photo);
 
@@ -397,8 +412,20 @@ class Admin extends BaseController
             'foto_profile' => $namaFoto,
         ]);
 
-        session()->setFlashdata('add', 'Data Admin berhasil dibuat');
+        session()->setFlashdata('add', 'Data admin berhasil dibuat');
         return redirect()->to('/admin2');
+
+            }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'title' => 'Create admin',
+                'errors' => $validation->getErrors(),
+                'admin' => $this->adminModel->getAdmin($id)
+                ];
+            return view('/admin/admin/create', $data);
+        }
     }
 
     public function delete_adm($id)
@@ -427,28 +454,94 @@ class Admin extends BaseController
 
     public function save_guru()
     {
-        $data = $this->request->getPost();
-        $this->validation->run($data, 'crguru');
-        $errors = $this->validation->getErrors();
+        $validation = \Config\Services::validation();
+        
 
-        if($errors){
-            session()->setFlashdata('error', $errors);
-            return redirect()->to('/admin/guru/create');
-        }
-
-        $password = password_hash($data['password'], PASSWORD_DEFAULT);
-
-        $this->guruModel->save([
-            'username_guru' => $data['username'],
-            'password_guru' => $password,
-            'email_guru' => $data['email'],
-            'nama_guru' => $data['nama_guru'],
-            'jenis_kelamin' => $data['jenis_kelamin'],
-            'foto_profile' => $data['fotoprofil'],
+        $validation->setRules([
+            'username_guru' => [
+                'label' => 'Username',
+                'rules' => 'required|is_unique[guru.username_guru]',
+                'errors' => [
+                    'required' => 'Username perlu diisi',
+                    'is_unique' => 'Username sudah ada'
+                ]
+            ],
+            'password_guru' => [
+                'label' => 'Password',
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Password perlu diisi',
+                    'min_length' => 'Password harus terdiri dari 8 kata',
+                ]
+            ],
+            'email_guru' => [
+                'label' => 'Email',
+                'rules' => 'required|valid_email|is_unique[guru.email_guru]',
+                'errors' => [
+                    'required' => 'Email perlu diisi',
+                    'valid_email' => 'Data yang diisi bukan email',
+                    'is_unique' => 'Email sudah ada'                
+                ]
+            ],
+            'nama_guru' => [
+                'label' => 'Nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama perlu diisi'              
+                ]
+            ],
+            'jenis_kelamin' => [
+                'label' => 'Jenis Kelamin',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Kelamin perlu diisi'
+                ]
+            ],
+            'foto_profile' => [
+                'label' => 'Foto Profil',
+                'rules' => 'is_image[foto_profil]',
+                'errors' => [
+                    'is_image' => 'Data yang diisi buka foto',
+                    // 'mime_in' => 'Tipe data tidak diizinkan'              
+                ]
+            ],
         ]);
+        if ($validation->withRequest($this->request)->run())
+        {
+            $fileFoto =$this->request->getFile('foto_profil');
 
-        session()->setFlashdata('add', 'Data guru berhasil dibuat');
-        return redirect()->to('/admin/guru/index');
+            if($fileFoto->getError() == 4) {
+                $namaFoto = 'user.png';
+            } else {
+                $namaFoto = $fileFoto->getRandomName();
+    
+                $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+            }
+    
+            $password = password_hash($this->request->getVar('password_guru'), PASSWORD_DEFAULT);
+
+            $this->guruModel->save([
+                'username_guru' => $this->request->getVar('username_guru'),
+                'password_guru' => $password,
+                'email_guru' => $this->request->getVar('email_guru'),
+                'nama_guru' => $this->request->getVar('nama_guru'),
+                'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
+                'foto_profile' => $namaFoto,
+            ]);
+    
+            session()->setFlashdata('add', 'Data guru berhasil dibuat');
+            return redirect()->to('/guru2');
+    
+            }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'errors' => $validation->getErrors(),
+                'title' => 'Create guru'
+                ];
+            return view('/admin/guru/create', $data);
+        }
     }
     public function create_murid()
     {
@@ -461,28 +554,104 @@ class Admin extends BaseController
 
     public function save_murid()
     {
-        $data = $this->request->getPost();
-        $this->validation->run($data, 'crmurid');
-        $errors = $this->validation->getErrors();
+        $validation = \Config\Services::validation();
+        
 
-        if($errors){
-            session()->setFlashdata('error', $errors);
-            return redirect()->to('/admin/murid/create');
-        }
-
-        $password = password_hash($data['password'], PASSWORD_DEFAULT);
-
-        $this->muridModel->save([
-            'nisn' => $data['nisnmurid'],
-            'username_murid' => $data['username'],
-            'password_murid' => $password,
-            'email_murid' => $data['email'],
-            'nama_murid' => $data['nama_murid'],
-            'jenis_kelamin' => $data['jenis_kelamin'],
-            'foto_profile' => $data['fotoprofil'],
+        $validation->setRules([
+            'nisn' => [
+                'label' => 'Nisn',
+                'rules' => 'required|is_unique[murid.nisn]|min_length[8]',
+                'errors' => [
+                    'required' => 'Nisn perlu diisi',
+                    'is_unique' => 'Nisn sudah ada',
+                    'min_length' => 'Nisn memiliki 8 huruf (Harus)',
+                ]
+            ],
+            'username_murid' => [
+                'label' => 'Username',
+                'rules' => 'required|is_unique[murid.username_murid]',
+                'errors' => [
+                    'required' => 'Username perlu diisi',
+                    'is_unique' => 'Username sudah ada'
+                ]
+            ],
+            'password_murid' => [
+                'label' => 'Password',
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Password perlu diisi',
+                    'min_length' => 'Password harus terdiri dari 8 kata',
+                ]
+            ],
+            'email_murid' => [
+                'label' => 'Email',
+                'rules' => 'required|valid_email|is_unique[murid.email_murid]',
+                'errors' => [
+                    'required' => 'Email perlu diisi',
+                    'valid_email' => 'Data yang diisi bukan email',
+                    'is_unique' => 'Email sudah ada'                
+                ]
+            ],
+            'nama_murid' => [
+                'label' => 'Nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama perlu diisi'              
+                ]
+            ],
+            'jenis_kelamin' => [
+                'label' => 'Jenis Kelamin',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Kelamin perlu diisi'
+                ]
+            ],
+            'foto_profile' => [
+                'label' => 'Foto Profil',
+                'rules' => 'is_image[foto_profil]',
+                'errors' => [
+                    'is_image' => 'Data yang diisi buka foto',
+                    // 'mime_in' => 'Tipe data tidak diizinkan'              
+                ]
+            ],
         ]);
-        session()->setFlashdata('add', 'Data murid berhasil dibuat');
-        return redirect()->to('/admin/murid/index');
+        if ($validation->withRequest($this->request)->run())
+        {
+            $fileFoto =$this->request->getFile('foto_profil');
+
+            if($fileFoto->getError() == 4) {
+                $namaFoto = 'user.png';
+            } else {
+                $namaFoto = $fileFoto->getRandomName();
+    
+                $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+            }
+    
+            $password = password_hash($this->request->getVar('password_murid'), PASSWORD_DEFAULT);
+
+            $this->muridModel->save([
+                'nisn' => $this->request->getVar('nisn'),
+                'username_murid' => $this->request->getVar('username_murid'),
+                'password_murid' => $password,
+                'email_murid' => $this->request->getVar('email_murid'),
+                'nama_murid' => $this->request->getVar('nama_murid'),
+                'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
+                'foto_profile' => $namaFoto,
+            ]);
+    
+            session()->setFlashdata('add', 'Data murid berhasil dibuat');
+            return redirect()->to('/murid2');
+    
+            }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'errors' => $validation->getErrors(),
+                'title' => 'Create murid'
+                ];
+            return view('/admin/murid/create', $data);
+        }
     }
     public function create_walimurid()
     {
@@ -601,13 +770,36 @@ class Admin extends BaseController
         return redirect()->to('/guru2');
     }
 
+    public function edit_gr($id)
+    {
+        $data = [
+            'title' => 'Edit Guru',
+            'validation' => \Config\Services::validation(),
+            'guru' => $this->guruModel->getGuru($id)
+        ];
+
+        return view('/admin/guru/edit', $data);
+    }
+
     public function index_murid()
     {
         $data = [
-            'title' => 'Data Murid'
+            'title' => 'Data Murid',
+            'murid' => $this->muridModel->getMurid()
         ];
 
         return view('/admin/murid/index', $data);
+    }
+
+    public function detail_murid($id)
+    {
+        $data = [
+            'title' => 'Detail Murid',
+            'murid' => $this->muridModel->getMurid($id)
+        ];
+
+
+        return view('/admin/murid/detail', $data);
     }
 
     public function index_walimurid()

@@ -44,8 +44,8 @@ $routes->get('/walimurid/dashboard', 'Walimurid::index', ['filter' => 'Walimurid
 
 // Admin User Create Route
 $routes->get('/admin/create', 'Admin::create_admin', ['filter' => 'AdminFilter']);
-$routes->get('/admin/guru/create', 'Admin::create_guru', ['filter' => 'AdminFilter']);
-$routes->get('/admin/murid/create', 'Admin::create_murid', ['filter' => 'AdminFilter']);
+$routes->get('/create-guru', 'Admin::create_guru', ['filter' => 'AdminFilter']);
+$routes->get('/create-murid', 'Admin::create_murid', ['filter' => 'AdminFilter']);
 $routes->get('/admin/walimurid/create', 'Admin::create_walimurid', ['filter' => 'AdminFilter']);
 $routes->get('/create-ibadah', 'Admin::create_ibadah', ['filter' => 'AdminFilter']);
 
@@ -58,24 +58,30 @@ $routes->get('/ibadahad2', 'Admin::index_ibadah', ['filter' => 'AdminFilter']);
 
 // Admin User Detail
 $routes->get('admin/detail/(:any)', 'admin::detail_admin/$1', ['filter' => 'AdminFilter']);
-$routes->get('guru/detail/(:any)', 'admin::detail_admin/$1', ['filter' => 'AdminFilter']);
-$routes->get('murid/detail/(:any)', 'admin::detail_admin/$1', ['filter' => 'AdminFilter']);
+$routes->get('guru/detail/(:any)', 'admin::detail_guru/$1', ['filter' => 'AdminFilter']);
+$routes->get('murid/detail/(:any)', 'admin::detail_murid/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Store
 $routes->post('admin/store', 'admin::save_admin', ['filter' => 'AdminFilter']);
 $routes->post('ibadah/store', 'admin::save_ibadah', ['filter' => 'AdminFilter']);
+$routes->post('guru/store', 'admin::save_guru', ['filter' => 'AdminFilter']);
+$routes->post('murid/store', 'admin::save_murid', ['filter' => 'AdminFilter']);
 
 // Admin User Edit
 $routes->get('/editadm/(:segment)', 'admin::edit_adm/$1', ['filter' => 'AdminFilter']);
 $routes->get('/editib/(:segment)', 'admin::edit_ibadah/$1', ['filter' => 'AdminFilter']);
+$routes->get('/editgr/(:segment)', 'admin::edit_gr/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Update
 $routes->post('/updateadm/(:segment)', 'admin::update_adm/$1', ['filter' => 'AdminFilter']);
+$routes->post('/updateib/(:segment)', 'admin::update_ibadah/$1', ['filter' => 'AdminFilter']);
+$routes->post('/updategr/(:segment)', 'admin::update_gr/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Delete
 $routes->delete('/deleteadm/(:segment)', 'admin::delete_adm/$1', ['filter' => 'AdminFilter']);
 $routes->delete('/deletegr/(:segment)', 'admin::delete_gr/$1', ['filter' => 'AdminFilter']);
 $routes->delete('/deletemr/(:segment)', 'admin::delete_gr/$1', ['filter' => 'AdminFilter']);
+$routes->delete('/deleteib/(:segment)', 'admin::delete_ibadah/$1', ['filter' => 'AdminFilter']);
 
 // Murid Route 
 $routes->get('/ibadah2', 'Murid::index_ibadah', ['filter' => 'MuridFilter']);

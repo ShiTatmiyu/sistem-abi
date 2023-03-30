@@ -1,6 +1,6 @@
 <?= $this->extend('layout/template_admin'); ?>
 <?= $this->section('content'); ?>
-<link rel="stylesheet" href="/css/create_admin.css">
+<link rel="stylesheet" href="/css/create.css">
         
         <h1 class="title-page">Tambah Admin</h1>
         <form method="post" action="/admin/store" enctype="multipart/form-data">

@@ -29,4 +29,10 @@ class IbadahModel extends Model
 
     return $this->table('ibadah')->like('nama_ibadah', $keyword);
   }
+
+  public function HapusIbadah($id)
+  {
+      $query = $this->db->table($this->table)->delete(array('id_ibadah' => $id));
+      return $query;
+  }
 }
