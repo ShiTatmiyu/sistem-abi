@@ -77,7 +77,7 @@ $routes->get('/editmr/(:segment)', 'admin::edit_mr/$1', ['filter' => 'AdminFilte
 $routes->post('/updateadm/(:segment)', 'admin::update_adm/$1', ['filter' => 'AdminFilter']);
 $routes->post('/updateib/(:segment)', 'admin::update_ibadah/$1', ['filter' => 'AdminFilter']);
 $routes->post('/updategr/(:segment)', 'admin::update_gr/$1', ['filter' => 'AdminFilter']);
-$routes->post('/updatemr/(:any)', 'admin::update_mr/$1', ['filter' => 'AdminFilter']);
+$routes->post('/updatemr/(:segment)', 'admin::update_mr/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Delete
 $routes->delete('/deleteadm/(:segment)', 'admin::delete_adm/$1', ['filter' => 'AdminFilter']);
