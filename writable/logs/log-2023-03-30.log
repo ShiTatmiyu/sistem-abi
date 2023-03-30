@@ -194,3 +194,782 @@ INFO - 2023-03-30 08:35:08 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-03-30 08:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-03-30 08:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-03-30 08:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 08:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:09:31 --> Invalid file: "/admin/guru/edit.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/guru/edit.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/guru/edit', [], true)
+ 3 APPPATH\Controllers\Admin.php(781): view('/admin/guru/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->edit_gr('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:15:06 --> Undefined variable: admin
+in APPPATH\Views\admin\guru\edit.php on line 43.
+ 1 APPPATH\Views\admin\guru\edit.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: admin', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\guru\\edit.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\guru\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/guru/edit', [], true)
+ 5 APPPATH\Controllers\Admin.php(781): view('/admin/guru/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->edit_gr('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:16:04 --> Undefined variable: id
+in APPPATH\Controllers\Admin.php on line 788.
+ 1 APPPATH\Controllers\Admin.php(788): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Controllers\\Admin.php', 788, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_gr('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:28:57 --> Undefined variable: guru
+in APPPATH\Views\admin\murid\detail.php on line 6.
+ 1 APPPATH\Views\admin\murid\detail.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: guru', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/murid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(922): view('/admin/murid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_murid('123456789')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:29:28 --> Undefined variable: nisn
+in APPPATH\Views\admin\murid\detail.php on line 6.
+ 1 APPPATH\Views\admin\murid\detail.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: nisn', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/murid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(922): view('/admin/murid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_murid('123456789')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:29:38 --> Undefined index: id_murid
+in APPPATH\Views\admin\murid\detail.php on line 14.
+ 1 APPPATH\Views\admin\murid\detail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_murid', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/murid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(922): view('/admin/murid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_murid('123456789')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:30:02 --> Undefined variable: admin
+in APPPATH\Views\admin\murid\detail.php on line 18.
+ 1 APPPATH\Views\admin\murid\detail.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: admin', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/murid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(922): view('/admin/murid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_murid('123456789')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:43:09 --> Trying to get property 'foto_profile' of non-object
+in APPPATH\Controllers\Admin.php on line 761.
+ 1 APPPATH\Controllers\Admin.php(761): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_profile\' of non-object', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Controllers\\Admin.php', 761, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->delete_gr('987654321')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 14:44:09 --> Trying to get property 'foto_profile' of non-object
+in APPPATH\Controllers\Admin.php on line 761.
+ 1 APPPATH\Controllers\Admin.php(761): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_profile\' of non-object', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Controllers\\Admin.php', 761, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->delete_gr('987654321')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 14:46:55 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`db_absen_ibadah`.`absenibadahhold`, CONSTRAINT `AbsenIbadahHold_nisn_murid_foreign` FOREIGN KEY (`nisn_murid`) REFERENCES `murid` (`nisn`)) in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\app\Models\MuridModel.php(38): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(931): App\Models\MuridModel->Hapusmurid('987654321')
+#6 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->delete_mr('987654321')
+#7 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-03-30 14:46:55 --> Cannot delete or update a parent row: a foreign key constraint fails (`db_absen_ibadah`.`absenibadahhold`, CONSTRAINT `AbsenIbadahHold_nisn_murid_foreign` FOREIGN KEY (`nisn_murid`) REFERENCES `murid` (`nisn`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `murid`
+WHERE `nisn` = \'987654321\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `murid`
+WHERE `nisn` = \'987654321\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `murid`
+WHERE `nisn` = \'987654321\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `murid`
+WHERE `nisn` = :nisn:', [...], false)
+ 5 APPPATH\Models\MuridModel.php(38): CodeIgniter\Database\BaseBuilder->delete([...])
+ 6 APPPATH\Controllers\Admin.php(931): App\Models\MuridModel->Hapusmurid('987654321')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->delete_mr('987654321')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 14:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 14:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:04:13 --> mysqli_sql_exception: Duplicate entry 'murid01' for key 'username_murid' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1066): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:04:13 --> Duplicate entry 'murid01' for key 'username_murid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$.b/adaqbeXkHuAWJ3GgTFOk5/WAEWxMLMnlcyLkKfPS/Uqipn4R3K\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$.b/adaqbeXkHuAWJ3GgTFOk5/WAEWxMLMnlcyLkKfPS/Uqipn4R3K\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$.b/adaqbeXkHuAWJ3GgTFOk5/WAEWxMLMnlcyLkKfPS/Uqipn4R3K\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1066): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:05:43 --> mysqli_sql_exception: Duplicate entry 'murid01' for key 'username_murid' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1066): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:05:43 --> Duplicate entry 'murid01' for key 'username_murid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$iYUYrNW0SFd6sUw5fhOUyuDJXh.eHkN84eTIzpvBmkl7ujVqwFHra\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$iYUYrNW0SFd6sUw5fhOUyuDJXh.eHkN84eTIzpvBmkl7ujVqwFHra\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$iYUYrNW0SFd6sUw5fhOUyuDJXh.eHkN84eTIzpvBmkl7ujVqwFHra\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1066): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:07:32 --> mysqli_sql_exception: Duplicate entry 'murid01' for key 'username_murid' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1066): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:07:32 --> Duplicate entry 'murid01' for key 'username_murid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$3X96Y2sm53UgoZ9GOKFrKuui6z/maPRwMIv0yMPdIY2UYBrQnjb3i\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$3X96Y2sm53UgoZ9GOKFrKuui6z/maPRwMIv0yMPdIY2UYBrQnjb3i\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid01\', \'$2y$10$3X96Y2sm53UgoZ9GOKFrKuui6z/maPRwMIv0yMPdIY2UYBrQnjb3i\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1066): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:10:37 --> mysqli_sql_exception: Duplicate entry '123456789' for key 'PRIMARY' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1066): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:10:37 --> Duplicate entry '123456789' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'123456789\', \'murid01\', \'$2y$10$LS0J1DMmRN1ZmRkP9Dg.LezUHKC07987uJigONFqpWkeWAz3clQj2\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'123456789\', \'murid01\', \'$2y$10$LS0J1DMmRN1ZmRkP9Dg.LezUHKC07987uJigONFqpWkeWAz3clQj2\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'123456789\', \'murid01\', \'$2y$10$LS0J1DMmRN1ZmRkP9Dg.LezUHKC07987uJigONFqpWkeWAz3clQj2\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:nisn:, :username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1066): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 15:12:51 --> Undefined variable: muridOld
+in APPPATH\Controllers\Admin.php on line 955.
+ 1 APPPATH\Controllers\Admin.php(955): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: muridOld', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Controllers\\Admin.php', 955, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 15:13:30 --> Undefined variable: rule_nisn
+in APPPATH\Controllers\Admin.php on line 972.
+ 1 APPPATH\Controllers\Admin.php(972): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: rule_nisn', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Controllers\\Admin.php', 972, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:13:46 --> mysqli_sql_exception: Duplicate entry '123456789' for key 'PRIMARY' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1053): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:13:46 --> Duplicate entry '123456789' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'123456789\', \'murid01\', \'$2y$10$./2G1nHsQLT00rnRp7qzMOK0b7n6Vhe6/hssDLDxjFVvTP5sKdsDa\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'123456789\', \'murid01\', \'$2y$10$./2G1nHsQLT00rnRp7qzMOK0b7n6Vhe6/hssDLDxjFVvTP5sKdsDa\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'123456789\', \'murid01\', \'$2y$10$./2G1nHsQLT00rnRp7qzMOK0b7n6Vhe6/hssDLDxjFVvTP5sKdsDa\', \'hehe@gmail.com\', \'Arlechino\', \'Perempuan\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:nisn:, :username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1053): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('123456789')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:44:02 --> mysqli_sql_exception: Duplicate entry '987654321' for key 'PRIMARY' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1056): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:44:02 --> Duplicate entry '987654321' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$/Yq.13D4WO227w11W/ehuOvukqQCGx2At3Kdi6U8/CZdw/hYj1PiW\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$/Yq.13D4WO227w11W/ehuOvukqQCGx2At3Kdi6U8/CZdw/hYj1PiW\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$/Yq.13D4WO227w11W/ehuOvukqQCGx2At3Kdi6U8/CZdw/hYj1PiW\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:nisn:, :username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1056): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:45:14 --> mysqli_sql_exception: Duplicate entry 'murid02' for key 'username_murid' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1055): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:45:14 --> Duplicate entry 'murid02' for key 'username_murid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$ej3OGyMewMeOhieyS2y8GuTwBqV5UxQ.LHxPfH0nZ8HqlXACascoG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$ej3OGyMewMeOhieyS2y8GuTwBqV5UxQ.LHxPfH0nZ8HqlXACascoG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$ej3OGyMewMeOhieyS2y8GuTwBqV5UxQ.LHxPfH0nZ8HqlXACascoG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1055): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:46:01 --> mysqli_sql_exception: Duplicate entry 'murid02' for key 'username_murid' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1055): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:46:01 --> Duplicate entry 'murid02' for key 'username_murid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$hD9P6A038Hf54.aH4f.sseh2GEz4A64viVdRcKGwpMHdqY0ytP1DG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$hD9P6A038Hf54.aH4f.sseh2GEz4A64viVdRcKGwpMHdqY0ytP1DG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$hD9P6A038Hf54.aH4f.sseh2GEz4A64viVdRcKGwpMHdqY0ytP1DG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1055): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:46:08 --> mysqli_sql_exception: Duplicate entry 'murid02' for key 'username_murid' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1055): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:46:08 --> Duplicate entry 'murid02' for key 'username_murid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$CJKCPcVVyEZGQBhD26VW9u/.4AGMNRlkq5H29YcBqLEDrRAbY4pPK\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$CJKCPcVVyEZGQBhD26VW9u/.4AGMNRlkq5H29YcBqLEDrRAbY4pPK\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$CJKCPcVVyEZGQBhD26VW9u/.4AGMNRlkq5H29YcBqLEDrRAbY4pPK\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1055): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 15:49:53 --> Undefined variable: nisn
+in APPPATH\Controllers\Admin.php on line 955.
+ 1 APPPATH\Controllers\Admin.php(955): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: nisn', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Controllers\\Admin.php', 955, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 15:50:07 --> Undefined variable: adminOld
+in APPPATH\Controllers\Admin.php on line 957.
+ 1 APPPATH\Controllers\Admin.php(957): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: adminOld', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Controllers\\Admin.php', 957, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 15:52:01 --> mysqli_sql_exception: Duplicate entry 'murid02' for key 'username_murid' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1062): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 15:52:01 --> Duplicate entry 'murid02' for key 'username_murid'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$4W9PFj8LCMcqwa6/X1nhYu0UTpv4FSOKDALWZNmYLqW8CLrxlN5PG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$4W9PFj8LCMcqwa6/X1nhYu0UTpv4FSOKDALWZNmYLqW8CLrxlN5PG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'murid02\', \'$2y$10$4W9PFj8LCMcqwa6/X1nhYu0UTpv4FSOKDALWZNmYLqW8CLrxlN5PG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1062): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 15:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 15:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 16:10:13 --> mysqli_sql_exception: Duplicate entry '987654321' for key 'PRIMARY' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1063): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 16:10:13 --> Duplicate entry '987654321' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$Es/LRyPzoaaMHe0sSpl7R.dwP5BKU6csvW3Ol2ANCGhOwat138o1W\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$Es/LRyPzoaaMHe0sSpl7R.dwP5BKU6csvW3Ol2ANCGhOwat138o1W\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$Es/LRyPzoaaMHe0sSpl7R.dwP5BKU6csvW3Ol2ANCGhOwat138o1W\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:nisn:, :username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1063): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 16:15:30 --> Undefined index: foto_profile
+in APPPATH\Views\admin\murid\detail.php on line 6.
+ 1 APPPATH\Views\admin\murid\detail.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: foto_profile', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/murid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(922): view('/admin/murid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_murid('0')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 16:17:15 --> Undefined index: foto_profile
+in APPPATH\Views\admin\murid\detail.php on line 6.
+ 1 APPPATH\Views\admin\murid\detail.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: foto_profile', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\murid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/murid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(922): view('/admin/murid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_murid('0')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 16:17:45 --> mysqli_sql_exception: Duplicate entry '987654321' for key 'PRIMARY' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1053): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 16:17:45 --> Duplicate entry '987654321' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$sAVe2hodxWXx6WDq9S7L6OQJCX0LVYLZTZd/EnMP4erdbyrbeZTXy\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$sAVe2hodxWXx6WDq9S7L6OQJCX0LVYLZTZd/EnMP4erdbyrbeZTXy\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$sAVe2hodxWXx6WDq9S7L6OQJCX0LVYLZTZd/EnMP4erdbyrbeZTXy\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:nisn:, :username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1053): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 16:21:21 --> mysqli_sql_exception: Duplicate entry '987654321' for key 'PRIMARY' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1053): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 16:21:21 --> Duplicate entry '987654321' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$aAHzkoHhS4tkmpxzDU64uOMFeyxXaCMjp9OZFxYnJk/YRsDyGKfsG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$aAHzkoHhS4tkmpxzDU64uOMFeyxXaCMjp9OZFxYnJk/YRsDyGKfsG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (\'987654321\', \'murid02\', \'$2y$10$aAHzkoHhS4tkmpxzDU64uOMFeyxXaCMjp9OZFxYnJk/YRsDyGKfsG\', \'hehe@gmail.com\', \'Wanderer\', \'Laki laki\', \'user.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `jenis_kelamin`, `foto_profile`) VALUES (:nisn:, :username_murid:, :password_murid:, :email_murid:, :nama_murid:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1053): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('987654321')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')

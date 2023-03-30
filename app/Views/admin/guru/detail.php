@@ -18,7 +18,7 @@
                 <button type="submit" class="delete-btn" onclick="return confirm('apakah ada ingin menghapus dengan Username = <?= $guru["username_guru"] ?>')">Hapus</a>
             </form>
         </div>
-        <a class="back-btn" href="/admin2">Balik ke list</a>
+        <a class="back-btn" href="/guru2">Balik ke list</a>
     </div>
 
 <?= $this->endSection(); ?>

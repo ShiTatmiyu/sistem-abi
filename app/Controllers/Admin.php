@@ -319,7 +319,7 @@ class Admin extends BaseController
             $rule_username = 'required|is_unique[admin.username_admin]';
         };
 
-        if($adminOld['email_admin'] == $this->request->getVar('email')) {
+        if($adminOld['email_admin'] == $this->request->getVar('email_admin')) {
             $rule_email = 'required';
         } else {    
             $rule_email = 'required|valid_email|is_unique[admin.email_admin]';
@@ -400,14 +400,14 @@ class Admin extends BaseController
     
             $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
         }
-        $password = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
+        $password = password_hash($this->request->getVar('password_admin'), PASSWORD_DEFAULT);
 
         $this->adminModel->save([
             'id_admin' => $id,
-            'username_admin' => $this->request->getVar('username'),
+            'username_admin' => $this->request->getVar('username_admin'),
             'password_admin' => $password,
-            'email_admin' => $this->request->getVar('email'),
-            'nama_admin' => $this->request->getVar('nama'),
+            'email_admin' => $this->request->getVar('email_admin'),
+            'nama_admin' => $this->request->getVar('nama_admin'),
             'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
             'foto_profile' => $namaFoto,
         ]);
@@ -781,6 +781,126 @@ class Admin extends BaseController
         return view('/admin/guru/edit', $data);
     }
 
+    public function update_gr($id)
+    {
+        $validation = \Config\Services::validation();
+
+        $guruOld = $this->guruModel->getguru($id);
+        if($guruOld['username_guru'] == $this->request->getVar('username_guru')) {
+            $rule_username = 'required';
+        } else {    
+            $rule_username = 'required|is_unique[guru.username_guru]';
+        };
+
+        if($guruOld['email_guru'] == $this->request->getVar('email_guru')) {
+            $rule_email = 'required';
+        } else {    
+            $rule_email = 'required|valid_email|is_unique[guru.email_guru]';
+        };
+
+        $validation->setRules([
+            'username_guru' => [
+                'label' => 'Username',
+                'rules' => $rule_username,
+                'errors' => [
+                    'required' => 'Username perlu diisi',
+                    'is_unique' => 'Username sudah ada'
+                ]
+            ],
+            'password_guru' => [
+                'label' => 'Password',
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Password perlu diisi',
+                    'min_length' => 'Password harus terdiri dari 8 kata',
+                ]
+            ],
+            'email_guru' => [
+                'label' => 'Email',
+                'rules' => $rule_email,
+                'errors' => [
+                    'required' => 'Email perlu diisi',
+                    'valid_email' => 'Data yang diisi bukan email',
+                    'is_unique' => 'Email sudah ada'                
+                ]
+            ],
+            'nama_guru' => [
+                'label' => 'Nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama perlu diisi'              
+                ]
+            ],
+            'jenis_kelamin' => [
+                'label' => 'Jenis Kelamin',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Kelamin perlu diisi'
+                ]
+            ],
+            'foto_profile' => [
+                'label' => 'Foto Profil',
+                'rules' => 'is_image[foto_profil]',
+                'errors' => [
+                    'is_image' => 'Data yang diisi buka foto',
+                    // 'mime_in' => 'Tipe data tidak diizinkan'              
+                ]
+            ],
+        ]);
+
+        if ($validation->withRequest($this->request)->run())
+        {
+            $fileFoto =$this->request->getFile('foto_profil');
+            $getphoto = $this->guruModel->Pilihguru($id)->getRow();
+            $nama = $getphoto->foto_profile;
+
+        if($fileFoto->getError() == 4) {
+            $namaFoto = $getphoto->foto_profile;
+            
+        } 
+        else if($nama == "user.png") {
+
+            $namaFoto = $fileFoto->getRandomName();
+    
+            $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+        }
+        else {
+            $getphoto = $this->guruModel->Pilihguru($id)->getRow();
+            $photo = $getphoto->foto_profile;
+            @unlink(ROOTPATH . 'public/img/'. $photo);
+
+            $namaFoto = $fileFoto->getRandomName();
+    
+            $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+        }
+        $password = password_hash($this->request->getVar('password_guru'), PASSWORD_DEFAULT);
+
+        $this->guruModel->save([
+            'id_guru' => $id,
+            'username_guru' => $this->request->getVar('username_guru'),
+            'password_guru' => $password,
+            'email_guru' => $this->request->getVar('email_guru'),
+            'nama_guru' => $this->request->getVar('nama_guru'),
+            'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
+            'foto_profile' => $namaFoto,
+        ]);
+
+        session()->setFlashdata('add', 'Data guru berhasil dibuat');
+        return redirect()->to('/guru2');
+
+            }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'title' => 'Create guru',
+                'errors' => $validation->getErrors(),
+                'guru' => $this->guruModel->getguru($id)
+                ];
+            return view('/admin/guru/edit', $data);
+        }
+    }
+
     public function index_murid()
     {
         $data = [
@@ -800,6 +920,153 @@ class Admin extends BaseController
 
 
         return view('/admin/murid/detail', $data);
+    }
+    
+    public function delete_mr($id)
+    {
+        $getphoto = $this->muridModel->Pilihmurid($id)->getRow();
+        $photo = $getphoto->foto_profile;
+
+        if ($photo == "user.png") {
+            $this->muridModel->HapusMurid($id);
+        } else {
+            @unlink(ROOTPATH . 'public/img/'. $photo);
+            $this->muridModel->HapusMpurid($id);
+        }
+
+        return redirect()->to('/murid2');
+    }
+
+    public function edit_mr($id)
+    {
+        $data = [
+            'title' => 'Edit Murid',
+            'validation' => \Config\Services::validation(),
+            'murid' => $this->muridModel->getMurid($id)
+        ];
+
+        return view('/admin/murid/edit', $data);
+    }
+
+    public function update_mr($id)
+    {
+        $validation = \Config\Services::validation();
+
+        $muridOld = $this->muridModel->getmurid($id);
+        if($muridOld['username_murid'] == $this->request->getVar('username_murid')) {
+            $rule_username = 'required';
+        } else {    
+            $rule_username = 'required|is_unique[murid.username_murid]';
+        };
+
+        if($muridOld['email_murid'] == $this->request->getVar('email_murid')) {
+            $rule_email = 'required';
+        } else {    
+            $rule_email = 'required|valid_email|is_unique[murid.email_murid]';
+        };
+
+        $validation->setRules([
+            'username_murid' => [
+                'label' => 'Username',
+                'rules' => $rule_username,
+                'errors' => [
+                    'required' => 'Username perlu diisi',
+                    'is_unique' => 'Username sudah ada'
+                ]
+            ],
+            'password_murid' => [
+                'label' => 'Password',
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Password perlu diisi',
+                    'min_length' => 'Password harus terdiri dari 8 kata',
+                ]
+            ],
+            'email_murid' => [
+                'label' => 'Email',
+                'rules' => $rule_email,
+                'errors' => [
+                    'required' => 'Email perlu diisi',
+                    'valid_email' => 'Data yang diisi bukan email',
+                    'is_unique' => 'Email sudah ada'                
+                ]
+            ],
+            'nama_murid' => [
+                'label' => 'Nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama perlu diisi'              
+                ]
+            ],
+            'jenis_kelamin' => [
+                'label' => 'Jenis Kelamin',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Kelamin perlu diisi'
+                ]
+            ],
+            'foto_profile' => [
+                'label' => 'Foto Profil',
+                'rules' => 'is_image[foto_profil]',
+                'errors' => [
+                    'is_image' => 'Data yang diisi buka foto',
+                    // 'mime_in' => 'Tipe data tidak diizinkan'              
+                ]
+            ],
+        ]);
+
+        if ($validation->withRequest($this->request)->run())
+        {
+            $fileFoto =$this->request->getFile('foto_profil');
+            $getphoto = $this->muridModel->Pilihmurid($id)->getRow();
+            $nama = $getphoto->foto_profile;
+
+        if($fileFoto->getError() == 4) {
+            $namaFoto = $getphoto->foto_profile;
+            
+        } 
+        else if($nama == "user.png") {
+
+            $namaFoto = $fileFoto->getRandomName();
+    
+            $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+        }
+        else {
+            $getphoto = $this->muridModel->Pilihmurid($id)->getRow();
+            $photo = $getphoto->foto_profile;
+            @unlink(ROOTPATH . 'public/img/'. $photo);
+
+            $namaFoto = $fileFoto->getRandomName();
+    
+            $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+        }
+        $password = password_hash($this->request->getVar('password_murid'), PASSWORD_DEFAULT);
+
+        $this->muridModel->save([
+            'nisn' => $id,
+            'username_murid' => $this->request->getVar('username_murid'),
+            'password_murid' => $password,
+            'email_murid' => $this->request->getVar('email_murid'),
+            'nama_murid' => $this->request->getVar('nama_murid'),
+            'kelas' => $this->request->getVar('kelas'),
+            'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
+            'foto_profile' => $namaFoto,
+        ]);
+
+        session()->setFlashdata('add', 'Data murid berhasil dibuat');
+        return redirect()->to('/murid2');
+
+            }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'title' => 'Create murid',
+                'errors' => $validation->getErrors(),
+                'murid' => $this->muridModel->getmurid($id)
+                ];
+            return view('/admin/murid/edit', $data);
+        }
     }
 
     public function index_walimurid()

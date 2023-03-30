@@ -3,22 +3,22 @@
 <link rel="stylesheet" href="/css/detail_admin.css">
 
     <div class="content">
-        <img class="photo" src="/img/<?= $guru["foto_profile"] ?>">
+        <img class="photo" src="/img/<?= $murid["foto_profile"] ?>">
         <div>
-            <p>Username : <?= $guru["username_guru"] ?></p>
-            <p>Nama : <?= $guru["nama_guru"] ?></p>
-            <p>Email : <?= $guru["email_guru"] ?></p>
-            <p>Jenis Kelamin : <?= $guru["jenis_kelamin"] ?></p>
+            <p>Username : <?= $murid["username_murid"] ?></p>
+            <p>Nama : <?= $murid["nama_murid"] ?></p>
+            <p>Email : <?= $murid["email_murid"] ?></p>
+            <p>Jenis Kelamin : <?= $murid["jenis_kelamin"] ?></p>
         </div>
         <div>
-            <a class="edit-btn" href="/editgr/<?= $guru["id_guru"] ?>">Edit</a>
-            <form action="/deletegr/<?= $guru["id_guru"] ?>" method="post" class="d-inline">
+            <a class="edit-btn" href="/editmr/<?= $murid["nisn"] ?>">Edit</a>
+            <form action="/deletemr/<?= $murid["nisn"] ?>" method="post" class="d-inline">
             <?= csrf_field() ?>
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="delete-btn" onclick="return confirm('apakah ada ingin menghapus dengan Username = <?= $admin["username_admin"] ?>')">Hapus</a>
+                <button type="submit" class="delete-btn" onclick="return confirm('apakah ada ingin menghapus dengan Username = <?= $murid["username_murid"] ?>')">Hapus</a>
             </form>
         </div>
-        <a class="back-btn" href="/admin2">Balik ke list</a>
+        <a class="back-btn" href="/murid2">Balik ke list</a>
     </div>
 
 <?= $this->endSection(); ?>

@@ -71,16 +71,18 @@ $routes->post('murid/store', 'admin::save_murid', ['filter' => 'AdminFilter']);
 $routes->get('/editadm/(:segment)', 'admin::edit_adm/$1', ['filter' => 'AdminFilter']);
 $routes->get('/editib/(:segment)', 'admin::edit_ibadah/$1', ['filter' => 'AdminFilter']);
 $routes->get('/editgr/(:segment)', 'admin::edit_gr/$1', ['filter' => 'AdminFilter']);
+$routes->get('/editmr/(:segment)', 'admin::edit_mr/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Update
 $routes->post('/updateadm/(:segment)', 'admin::update_adm/$1', ['filter' => 'AdminFilter']);
 $routes->post('/updateib/(:segment)', 'admin::update_ibadah/$1', ['filter' => 'AdminFilter']);
 $routes->post('/updategr/(:segment)', 'admin::update_gr/$1', ['filter' => 'AdminFilter']);
+$routes->post('/updatemr/(:any)', 'admin::update_mr/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Delete
 $routes->delete('/deleteadm/(:segment)', 'admin::delete_adm/$1', ['filter' => 'AdminFilter']);
 $routes->delete('/deletegr/(:segment)', 'admin::delete_gr/$1', ['filter' => 'AdminFilter']);
-$routes->delete('/deletemr/(:segment)', 'admin::delete_gr/$1', ['filter' => 'AdminFilter']);
+$routes->delete('/deletemr/(:segment)', 'admin::delete_mr/$1', ['filter' => 'AdminFilter']);
 $routes->delete('/deleteib/(:segment)', 'admin::delete_ibadah/$1', ['filter' => 'AdminFilter']);
 
 // Murid Route 

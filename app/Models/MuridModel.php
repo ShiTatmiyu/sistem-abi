@@ -35,8 +35,10 @@ class MuridModel extends Model
   
     public function Hapusmurid($id)
     {
+        $this->db->disableForeignKeyChecks();
         $query = $this->db->table($this->table)->delete(array('nisn' => $id));
         return $query;
+        $this->db->enableForeignKeyChecks();
     }
 
 }
