@@ -599,6 +599,13 @@ class Admin extends BaseController
                     'required' => 'Nama perlu diisi'              
                 ]
             ],
+            'kelas' => [
+                'label' => 'Kelas',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kelas perlu diisi'              
+                ]
+            ],
             'jenis_kelamin' => [
                 'label' => 'Jenis Kelamin',
                 'rules' => 'required',
@@ -635,6 +642,7 @@ class Admin extends BaseController
                 'password_murid' => $password,
                 'email_murid' => $this->request->getVar('email_murid'),
                 'nama_murid' => $this->request->getVar('nama_murid'),
+                'kelas' => $this->request->getVar('kelas'),
                 'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
                 'foto_profile' => $namaFoto,
             ]);
@@ -664,30 +672,103 @@ class Admin extends BaseController
 
     public function save_walimurid()
     {
-        $data = $this->request->getPost();
-        $this->validation->run($data, 'crwalimurid');
-        $errors = $this->validation->getErrors();
+        $validation = \Config\Services::validation();
+        
 
-        if($errors){
-            session()->setFlashdata('error', $errors);
-            return redirect()->to('/admin/walimurid/create');
-        }
-
-        $password = password_hash($data['password'], PASSWORD_DEFAULT);
-
-        $this->walimuridModel->save([
-            'username_walimurid' => $data['username'],
-            'password_walimurid' => $password,
-            'email_walimurid' => $data['email'],
-            'nama_walimurid' => $data['nama_walimurid'],
-            'nisn_murid' => $data['nisnmurid'],
-            'jenis_kelamin' => $data['jenis_kelamin'],
-            'foto_profile' => $data['fotoprofil'],
+        $validation->setRules([
+            'username_walimurid' => [
+                'label' => 'Username',
+                'rules' => 'required|is_unique[walimurid.username_walimurid]',
+                'errors' => [
+                    'required' => 'Username perlu diisi',
+                    'is_unique' => 'Username sudah ada'
+                ]
+            ],
+            'password_walimurid' => [
+                'label' => 'Password',
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Password perlu diisi',
+                    'min_length' => 'Password harus terdiri dari 8 kata',
+                ]
+            ],
+            'email_walimurid' => [
+                'label' => 'Email',
+                'rules' => 'required|valid_email|is_unique[walimurid.email_walimurid]',
+                'errors' => [
+                    'required' => 'Email perlu diisi',
+                    'valid_email' => 'Data yang diisi bukan email',
+                    'is_unique' => 'Email sudah ada'                
+                ]
+            ],
+            'nama_walimurid' => [
+                'label' => 'Nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama perlu diisi'              
+                ]
+            ],
+            'nisn_murid' => [
+                'label' => 'Nama',
+                'rules' => 'required|is_unique[walimurid.nisn_murid]',
+                'errors' => [
+                    'required' => 'Nisn Murid perlu diisi',
+                    'is_unique' => 'Nisn sudah Dipakai'        
+                ]
+            ],
+            'jenis_kelamin' => [
+                'label' => 'Jenis Kelamin',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Kelamin perlu diisi'
+                ]
+            ],
+            'foto_profile' => [
+                'label' => 'Foto Profil',
+                'rules' => 'is_image[foto_profil]',
+                'errors' => [
+                    'is_image' => 'Data yang diisi buka foto',
+                    // 'mime_in' => 'Tipe data tidak diizinkan'              
+                ]
+            ],
         ]);
+        if ($validation->withRequest($this->request)->run())
+        {
+            $fileFoto =$this->request->getFile('foto_profil');
 
-        session()->setFlashdata('add', 'Data walimurid berhasil dibuat');
-        return redirect()->to('/admin/walimurid/index');
-    }
+            if($fileFoto->getError() == 4) {
+                $namaFoto = 'user.png';
+            } else {
+                $namaFoto = $fileFoto->getRandomName();
+    
+                $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+            }
+    
+            $password = password_hash($this->request->getVar('password_walimurid'), PASSWORD_DEFAULT);
+
+            $this->walimuridModel->save([
+                'username_walimurid' => $this->request->getVar('username_walimurid'),
+                'password_walimurid' => $password,
+                'email_walimurid' => $this->request->getVar('email_walimurid'),
+                'nama_walimurid' => $this->request->getVar('nama_walimurid'),
+                'nisn_murid' => $this->request->getVar('nisn_murid'),
+                'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
+                'foto_profile' => $namaFoto,
+            ]);
+    
+            session()->setFlashdata('add', 'Data walimurid berhasil dibuat');
+            return redirect()->to('/walimurid2');
+    
+            }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'errors' => $validation->getErrors(),
+                'title' => 'Create walimurid'
+                ];
+            return view('/admin/walimurid/create', $data);
+        }    }
 
     public function logout()
     {
@@ -931,7 +1012,7 @@ class Admin extends BaseController
             $this->muridModel->HapusMurid($id);
         } else {
             @unlink(ROOTPATH . 'public/img/'. $photo);
-            $this->muridModel->HapusMpurid($id);
+            $this->muridModel->HapusMurid($id);
         }
 
         return redirect()->to('/murid2');
@@ -1042,8 +1123,7 @@ class Admin extends BaseController
         }
         $password = password_hash($this->request->getVar('password_murid'), PASSWORD_DEFAULT);
 
-        $this->muridModel->save([
-            'nisn' => $id,
+        $data= [
             'username_murid' => $this->request->getVar('username_murid'),
             'password_murid' => $password,
             'email_murid' => $this->request->getVar('email_murid'),
@@ -1051,7 +1131,9 @@ class Admin extends BaseController
             'kelas' => $this->request->getVar('kelas'),
             'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
             'foto_profile' => $namaFoto,
-        ]);
+        ];
+
+        $this->muridModel->updateMurid($id, $data);
 
         session()->setFlashdata('add', 'Data murid berhasil dibuat');
         return redirect()->to('/murid2');
@@ -1072,11 +1154,35 @@ class Admin extends BaseController
     public function index_walimurid()
     {
         $data = [
-            'title' => 'Data Walimurid'
+            'title' => 'Data Walimurid',
+            'walimurid' => $this->walimuridModel->getWalimurid(),
         ];
 
         return view('/admin/walimurid/index', $data);
     }
 
+    public function detail_walimurid($id)
+    {
+        $data = [
+            'title' => 'Detail walimurid',
+            'walimurid' => $this->walimuridModel->getWalimurid($id)
+        ];
 
+        return view('/admin/walimurid/detail', $data);
+    }
+
+    public function delete_wm($id)
+    {
+        $getphoto = $this->walimuridModel->Pilihwalimurid($id)->getRow();
+        $photo = $getphoto->foto_profile;
+
+        if ($photo == "user.png") {
+            $this->walimuridModel->Hapuswalimurid($id);
+        } else {
+            @unlink(ROOTPATH . 'public/img/'. $photo);
+            $this->walimuridModel->Hapuswalimurid($id);
+        }
+
+        return redirect()->to('/walimurid2');
+    }
 }

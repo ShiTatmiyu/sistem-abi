@@ -973,3 +973,499 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
 12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 16:30:33 --> mysqli_sql_exception: Duplicate entry '11111111' for key 'PRIMARY' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `mu...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mu...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mu...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mu...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1061): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->update_mr('11111111')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-30 16:30:33 --> Duplicate entry '11111111' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `kelas`, `jenis_kelamin`, `foto_profile`) VALUES (\'11111111\', \'murid03\', \'$2y$10$j7LJ7xsuTfuAQn8AuR.HxuYn2Kbtg92Qw6yz7Z6rSpEW/ueHF7Kya\', \'dafdia01@gmail.com\', \'Lumine\', \'8A\', \'Perempuan\', \'1680193810_ef0776a7c310759a9cc4.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `kelas`, `jenis_kelamin`, `foto_profile`) VALUES (\'11111111\', \'murid03\', \'$2y$10$j7LJ7xsuTfuAQn8AuR.HxuYn2Kbtg92Qw6yz7Z6rSpEW/ueHF7Kya\', \'dafdia01@gmail.com\', \'Lumine\', \'8A\', \'Perempuan\', \'1680193810_ef0776a7c310759a9cc4.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `kelas`, `jenis_kelamin`, `foto_profile`) VALUES (\'11111111\', \'murid03\', \'$2y$10$j7LJ7xsuTfuAQn8AuR.HxuYn2Kbtg92Qw6yz7Z6rSpEW/ueHF7Kya\', \'dafdia01@gmail.com\', \'Lumine\', \'8A\', \'Perempuan\', \'1680193810_ef0776a7c310759a9cc4.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `murid` (`nisn`, `username_murid`, `password_murid`, `email_murid`, `nama_murid`, `kelas`, `jenis_kelamin`, `foto_profile`) VALUES (:nisn:, :username_murid:, :password_murid:, :email_murid:, :nama_murid:, :kelas:, :jenis_kelamin:, :foto_profile:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(1061): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->update_mr('11111111')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 16:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 16:42:18 --> Invalid file: "/admin/walimurid/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/walimurid/index.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/index', [], true)
+ 3 APPPATH\Controllers\Admin.php(1087): view('/admin/walimurid/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 16:48:01 --> Undefined index: kelas
+in APPPATH\Views\admin\walimurid\index.php on line 40.
+ 1 APPPATH\Views\admin\walimurid\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kelas', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\index.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(1089): view('/admin/walimurid/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 16:50:06 --> Undefined property: App\Controllers\Admin::$MuridModel
+in APPPATH\Controllers\Admin.php on line 1086.
+ 1 APPPATH\Controllers\Admin.php(1086): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Admin::$MuridModel', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Controllers\\Admin.php', 1086, [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 16:50:23 --> Undefined index: nama_murid
+in APPPATH\Views\admin\walimurid\index.php on line 40.
+ 1 APPPATH\Views\admin\walimurid\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_murid', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\index.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(1089): view('/admin/walimurid/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 16:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 16:51:01 --> Trying to get property 'nama_murid' of non-object
+in APPPATH\Views\admin\walimurid\index.php on line 40.
+ 1 APPPATH\Views\admin\walimurid\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_murid\' of non-object', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\index.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(1089): view('/admin/walimurid/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:03:40 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\walimurid\index.php on line 38.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/index', [], true)
+ 4 APPPATH\Controllers\Admin.php(1089): view('/admin/walimurid/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:04:02 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\walimurid\index.php on line 39.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/index', [], true)
+ 4 APPPATH\Controllers\Admin.php(1089): view('/admin/walimurid/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:04:21 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\walimurid\index.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/index', [], true)
+ 4 APPPATH\Controllers\Admin.php(1089): view('/admin/walimurid/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:04:38 --> Undefined property: stdClass::$nisn
+in APPPATH\Views\admin\walimurid\index.php on line 42.
+ 1 APPPATH\Views\admin\walimurid\index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nisn', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\index.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(1089): view('/admin/walimurid/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index_walimurid()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:24:15 --> Trying to get property 'foto_profile' of non-object
+in APPPATH\Views\admin\walimurid\detail.php on line 6.
+ 1 APPPATH\Views\admin\walimurid\detail.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_profile\' of non-object', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(1099): view('/admin/walimurid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:24:41 --> Undefined index: foto_profile
+in APPPATH\Views\admin\walimurid\detail.php on line 6.
+ 1 APPPATH\Views\admin\walimurid\detail.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: foto_profile', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(1099): view('/admin/walimurid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:24:58 --> Trying to get property 'foto_profile' of non-object
+in APPPATH\Views\admin\walimurid\detail.php on line 6.
+ 1 APPPATH\Views\admin\walimurid\detail.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_profile\' of non-object', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(1099): view('/admin/walimurid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:25:19 --> Trying to get property 'username_walimurid' of non-object
+in APPPATH\Views\admin\walimurid\detail.php on line 8.
+ 1 APPPATH\Views\admin\walimurid\detail.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'username_walimurid\' of non-object', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(1099): view('/admin/walimurid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:25:57 --> Undefined variable: id
+in APPPATH\Models\WalimuridModel.php on line 24.
+ 1 APPPATH\Models\WalimuridModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Models\\WalimuridModel.php', 24, [...])
+ 2 APPPATH\Controllers\Admin.php(1095): App\Models\WalimuridModel->getWalimurid('987654321')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 17:26:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `walimur...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `walimur...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `walimur...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `walimur...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\app\Models\WalimuridModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1095): App\Models\WalimuridModel->getWalimurid('987654321')
+#6 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+#7 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-03-30 17:26:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `walimurid`.*, `murid`.`nama_murid` as `nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `walimurid`.*, `murid`.`nama_murid` as `nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `walimurid`.*, `murid`.`nama_murid` as `nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `walimurid`.*, `murid`.`nama_murid` as `nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\WalimuridModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(1095): App\Models\WalimuridModel->getWalimurid('987654321')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 17:32:36 --> mysqli_sql_exception: Table 'db_absen_ibadah.parent' doesn't exist in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\app\Models\WalimuridModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1095): App\Models\WalimuridModel->getWalimurid('987654321')
+#6 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+#7 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-03-30 17:32:36 --> Table 'db_absen_ibadah.parent' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `parent`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'987654321\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `parent`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'987654321\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `parent`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'987654321\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `parent`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = :walimurid.id_walimurid:', [...], false)
+ 5 APPPATH\Models\WalimuridModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(1095): App\Models\WalimuridModel->getWalimurid('987654321')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:33:15 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\walimurid\detail.php on line 6.
+ 1 APPPATH\Views\admin\walimurid\detail.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(1099): view('/admin/walimurid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('987654321')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:35:30 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\walimurid\detail.php on line 6.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/detail', [], true)
+ 4 APPPATH\Controllers\Admin.php(1098): view('/admin/walimurid/detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:36:03 --> Undefined variable: murid
+in APPPATH\Views\admin\walimurid\detail.php on line 19.
+ 1 APPPATH\Views\admin\walimurid\detail.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: murid', 'C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\sistem-abi\\app\\Views\\admin\\walimurid\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/admin/walimurid/detail', [], true)
+ 5 APPPATH\Controllers\Admin.php(1098): view('/admin/walimurid/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:42:44 --> Call to undefined method App\Models\MuridModel::HapusMpurid
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Admin.php(942): CodeIgniter\Model->__call('HapusMpurid', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->delete_mr('11111111')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-30 17:43:49 --> Call to undefined method App\Models\MuridModel::HapusMpurid
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Admin.php(942): CodeIgniter\Model->__call('HapusMpurid', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->delete_mr('11111111')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 17:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 17:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 18:14:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*, `murid`.`username_murid`.`murid`.`nama_murid`
+FROM `walimurid`
+JOIN `murid...' at line 1 in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `walimur...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `walimur...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `walimur...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `walimur...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\app\Models\WalimuridModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1168): App\Models\WalimuridModel->getWalimurid('5')
+#6 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('5')
+#7 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-03-30 18:14:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*, `murid`.`username_murid`.`murid`.`nama_murid`
+FROM `walimurid`
+JOIN `murid...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `walimurid`, *, `murid`.`username_murid`.`murid`.`nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `walimurid`, *, `murid`.`username_murid`.`murid`.`nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `walimurid`, *, `murid`.`username_murid`.`murid`.`nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `walimurid`, *, `murid`.`username_murid`.`murid`.`nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = :walimurid.id_walimurid:', [...], false)
+ 5 APPPATH\Models\WalimuridModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(1168): App\Models\WalimuridModel->getWalimurid('5')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('5')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 18:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-30 18:15:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*, `murid`.`username_murid` as `username_murid`, `murid`.`nama_murid` as `nam...' at line 1 in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `walimur...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `walimur...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `walimur...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `walimur...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\app\Models\WalimuridModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistem-abi\app\Controllers\Admin.php(1168): App\Models\WalimuridModel->getWalimurid('5')
+#6 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('5')
+#7 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-03-30 18:15:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*, `murid`.`username_murid` as `username_murid`, `murid`.`nama_murid` as `nam...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `walimurid`, *, `murid`.`username_murid` as `username_murid`, `murid`.`nama_murid` as `nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `walimurid`, *, `murid`.`username_murid` as `username_murid`, `murid`.`nama_murid` as `nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `walimurid`, *, `murid`.`username_murid` as `username_murid`, `murid`.`nama_murid` as `nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `walimurid`, *, `murid`.`username_murid` as `username_murid`, `murid`.`nama_murid` as `nama_murid`
+FROM `walimurid`
+JOIN `murid` ON `murid`.`nisn` = `walimurid`.`nisn_murid`
+WHERE `walimurid`.`id_walimurid` = :walimurid.id_walimurid:', [...], false)
+ 5 APPPATH\Models\WalimuridModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(1168): App\Models\WalimuridModel->getWalimurid('5')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->detail_walimurid('5')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-03-30 18:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-30 18:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MuridModel extends Model
 {
     protected $table            = 'murid';
-    protected $allowedFields    = ["nisn","username_murid","password_murid","email_murid","nama_murid","jenis_kelamin","foto_profile"];
+    protected $allowedFields    = ["nisn","username_murid","password_murid","email_murid","nama_murid","kelas","jenis_kelamin","foto_profile"];
 
     public function getMurid($nisn = false)
     {
@@ -17,6 +17,13 @@ class MuridModel extends Model
         return $this->where (['nisn' => $nisn])->first();
     }
   
+    public function updateMurid($id, $data)
+    {
+        $this->where('nisn', $id)
+             ->set($data)
+             ->update();
+    }
+
     public function search($keyword)
     {
       // $builder = $this->table('buku');

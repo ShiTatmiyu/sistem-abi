@@ -47,6 +47,14 @@
                     <?php endif; ?>
                 </div>
                 <div class="form-row">
+                    <label for="kelas">kelas : </label><br>
+                    <input class="form-input <?= (isset($errors['kelas'])) ? 'is-invalid' : ''; ?>" type="text" id="kelas" name="kelas" autofocus value="<?= old('kelas'); ?>">
+                    <br>
+                    <?php if(isset($errors['kelas'])) : ?>
+                        <span style="color: red;"><?php echo $errors['kelas'] ?></span>
+                    <?php endif; ?>
+                </div>
+                <div class="form-row">
                     <label for="jenis_kelamin">Jenis Kelamin : </label><br>
                     <input class="form-input <?= (isset($errors['jenis_kelamin'])) ? 'is-invalid' : ''; ?>" type="text" id="jenis_kelamin" name="jenis_kelamin" autofocus value="<?= old('jenis_kelamin'); ?>">
                     <br>
