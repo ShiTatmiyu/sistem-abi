@@ -25,13 +25,13 @@ class AbsenHoldSeeder extends Seeder
                 'nisn_murid' => '987654321',
                 'absenhold_ibadah' => 'Puasa Senin',
                 'status_ibadah' => 'Tidak Dilakukan',
-                'waktu_isi' => '2050-04-01 20:20:20',
+                'waktu_isi' => date('Y-m-d H:i:s'),
             ],
             [
                 'nisn_murid' => '987654321',
                 'absenhold_ibadah' => 'Puasa Kamis',
                 'status_ibadah' => 'Tidak Dilakukan',
-                'waktu_isi' => '2050-04-01 20:20:20',
+                'waktu_isi' => date('Y-m-d H:i:s'),
             ],
         ];
 

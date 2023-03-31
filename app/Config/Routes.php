@@ -42,6 +42,12 @@ $routes->get('/guru/dashboard', 'Guru::index', ['filter' => 'GuruFilter']);
 $routes->get('/murid/dashboard', 'Murid::index', ['filter' => 'MuridFilter']);
 $routes->get('/walimurid/dashboard', 'Walimurid::index', ['filter' => 'WalimuridFilter']);
 
+// User Profile Route
+$routes->get('/admin-profil/$id', 'Auth::profile_admin/$1' ,['filter' => 'AdminFilter']);
+$routes->get('/guru-profil/$id', 'Auth::profile_guru/$1' ,['filter' => 'GuruFilter']);
+$routes->get('/murid-profil/$id', 'Auth::profile_murid/$1' ,['filter' => 'MuridFilter']);
+$routes->get('/walimurid-profil/$id', 'Auth::profile_walimurid/$1' ,['filter' => 'WalimuridFilter']);
+
 // Admin User Create Route
 $routes->get('/admin/create', 'Admin::create_admin', ['filter' => 'AdminFilter']);
 $routes->get('/create-guru', 'Admin::create_guru', ['filter' => 'AdminFilter']);
@@ -74,12 +80,14 @@ $routes->get('/editadm/(:segment)', 'admin::edit_adm/$1', ['filter' => 'AdminFil
 $routes->get('/editib/(:segment)', 'admin::edit_ibadah/$1', ['filter' => 'AdminFilter']);
 $routes->get('/editgr/(:segment)', 'admin::edit_gr/$1', ['filter' => 'AdminFilter']);
 $routes->get('/editmr/(:segment)', 'admin::edit_mr/$1', ['filter' => 'AdminFilter']);
+$routes->get('/editwm/(:segment)', 'admin::edit_wm/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Update
 $routes->post('/updateadm/(:segment)', 'admin::update_adm/$1', ['filter' => 'AdminFilter']);
 $routes->post('/updateib/(:segment)', 'admin::update_ibadah/$1', ['filter' => 'AdminFilter']);
 $routes->post('/updategr/(:segment)', 'admin::update_gr/$1', ['filter' => 'AdminFilter']);
 $routes->post('/updatemr/(:segment)', 'admin::update_mr/$1', ['filter' => 'AdminFilter']);
+$routes->post('/updatewm/(:segment)', 'admin::update_wm/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Delete
 $routes->delete('/deleteadm/(:segment)', 'admin::delete_adm/$1', ['filter' => 'AdminFilter']);

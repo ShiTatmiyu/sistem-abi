@@ -15,6 +15,7 @@
             <th>Nama Ibadah</th>
             <th>Status Ibadah</th>
             <th>Waktu Isi</th>
+            <th>Keterangan tambahan</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -26,11 +27,12 @@
             <td><?= $lp['absenhold_ibadah'] ?></td>
             <td><?= $lp['status_ibadah'] ?></td>
             <td><?= $lp['waktu_isi'] ?></td>
-            <td>
-                <form action="/confirmed" method="post">
+            <form action="/confirmed" method="post">
+                <td><input type="text" name="keterangan"></td>
+                <td>
                     <button type="submit">Confirm</button>
-                </form>
-            </td>
+                </td>
+            </form>
         </tr>
     <?php } ?>
     </tbody>

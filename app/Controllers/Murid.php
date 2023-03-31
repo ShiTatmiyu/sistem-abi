@@ -84,6 +84,7 @@ class Murid extends BaseController
                 'absenhold_ibadah' => $ibadah['nama_ibadah'],
                 'status_ibadah' => isset($this->request->getPost('absen')[$ibadah['id_ibadah']]['present']) ? "Dilakukan" : "Tidak Dilakukan",
                 'waktu_isi' => date('Y-m-d H:i:s')
+                
             ];
             $this->absenModel->insert($absen);
         }

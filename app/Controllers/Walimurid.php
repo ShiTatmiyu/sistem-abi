@@ -65,11 +65,16 @@ class Walimurid extends BaseController
 
     public function confirm()
     {
+        $session = \Config\Services::session();
+
         // Retrieve the selected date from Table 1
         $selectedDate = $this->absenholdModel->select('waktu_isi')->distinct()->get()->getResult()[0]->waktu_isi;
+        $nisn = $session->get('students_id');
+
+        $array = array('waktu_isi' => $selectedDate, 'nisn_murid' => $nisn);
 
         // Retrieve the data from Table 1 that matches the selected date
-        $absenholdData = $this->absenholdModel->where('waktu_isi', $selectedDate)->findAll();
+        $absenholdData = $this->absenholdModel->where($array)->findAll();
 
         $absenData = [];
         foreach ($absenholdData as $row) {
@@ -78,14 +83,16 @@ class Walimurid extends BaseController
                 'nama_ibadah' => $row['absenhold_ibadah'],
                 'status_ibadah' => $row['status_ibadah'],
                 'waktu_isi' => $row['waktu_isi'],
+                'keterangan_walimurid' => $this->request->getVar('keterangan'),
                 // add more columns as necessary
             ];
         }
         // Insert the data into Table 2
         $this->absenModel->insertBatch($absenData);
 
+        
         // Delete the data from Table 1
-        $this->absenholdModel->where('waktu_isi', $selectedDate)->delete();
+        $this->absenholdModel->where($array)->delete();
 
         // Return a view to the user confirming that the data has been moved
         return redirect()->to('/laporan2');

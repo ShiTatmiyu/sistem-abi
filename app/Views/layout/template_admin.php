@@ -52,6 +52,11 @@
                         </a>
                     </li>
                     <li class="item">
+                        <a href="/profil/<?= session('user_id') ?>" class="menu-btn">
+                        <i class="fa-solid fa-cog"></i><span>Profil</span>
+                        </a>
+                    </li>
+                    <li class="item">
                         <a href="/logout" class="menu-btn">
                         <i class="fa-solid fa-right-from-bracket"></i><span>Logout</span>
                         </a>

@@ -1185,4 +1185,151 @@ class Admin extends BaseController
 
         return redirect()->to('/walimurid2');
     }
+
+    public function edit_wm($id)
+    {
+        $data = [
+            'title' => 'Edit Walimurid',
+            'validation' => \Config\Services::validation(),
+            'walimurid' => $this->walimuridModel->getWM($id)
+        ];
+
+        return view('/admin/walimurid/edit', $data);
+    }
+
+    public function update_wm($id)
+    {
+        $validation = \Config\Services::validation();
+
+        $walimuridOld = $this->walimuridModel->getWM($id);
+        if($walimuridOld['username_walimurid'] == $this->request->getVar('username_walimurid')) {
+            $rule_username = 'required';
+        } else {    
+            $rule_username = 'required|is_unique[walimurid.username_walimurid]';
+        };
+
+        if($walimuridOld['email_walimurid'] == $this->request->getVar('email_walimurid')) {
+            $rule_email = 'required';
+        } else {    
+            $rule_email = 'required|valid_email|is_unique[walimurid.email_walimurid]';
+        };
+
+        if($walimuridOld['nisn_murid'] == $this->request->getVar('nisn_murid')) {
+            $rule_nisn = 'required';
+        } else {    
+            $rule_nisn = 'required|valid_email|is_unique[walimurid.nisn_murid]';
+        };
+
+        $validation->setRules([
+            'username_walimurid' => [
+                'label' => 'Username',
+                'rules' => $rule_username,
+                'errors' => [
+                    'required' => 'Username perlu diisi',
+                    'is_unique' => 'Username sudah ada'
+                ]
+            ],
+            'password_walimurid' => [
+                'label' => 'Password',
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Password perlu diisi',
+                    'min_length' => 'Password harus terdiri dari 8 kata',
+                ]
+            ],
+            'email_walimurid' => [
+                'label' => 'Email',
+                'rules' => $rule_email,
+                'errors' => [
+                    'required' => 'Email perlu diisi',
+                    'valid_email' => 'Data yang diisi bukan email',
+                    'is_unique' => 'Email sudah ada'                
+                ]
+            ],
+            'nama_walimurid' => [
+                'label' => 'Nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama perlu diisi'              
+                ]
+            ],
+            'nisn_murid' => [
+                'label' => 'Nama',
+                'rules' => $rule_nisn,
+                'errors' => [
+                    'required' => 'Nisn Murid perlu diisi',
+                    'is_unique' => 'Nisn Murid tidak tersedia'              
+                ]
+            ],
+            'jenis_kelamin' => [
+                'label' => 'Jenis Kelamin',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Kelamin perlu diisi'
+                ]
+            ],
+            'foto_profile' => [
+                'label' => 'Foto Profil',
+                'rules' => 'is_image[foto_profil]',
+                'errors' => [
+                    'is_image' => 'Data yang diisi buka foto',
+                    // 'mime_in' => 'Tipe data tidak diizinkan'              
+                ]
+            ],
+        ]);
+
+        if ($validation->withRequest($this->request)->run())
+        {
+            $fileFoto =$this->request->getFile('foto_profil');
+            $getphoto = $this->walimuridModel->Pilihwalimurid($id)->getRow();
+            $nama = $getphoto->foto_profile;
+
+        if($fileFoto->getError() == 4) {
+            $namaFoto = $getphoto->foto_profile;
+            
+        } 
+        else if($nama == "user.png") {
+
+            $namaFoto = $fileFoto->getRandomName();
+    
+            $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+        }
+        else {
+            $getphoto = $this->walimuridModel->Pilihwalimurid($id)->getRow();
+            $photo = $getphoto->foto_profile;
+            @unlink(ROOTPATH . 'public/img/'. $photo);
+
+            $namaFoto = $fileFoto->getRandomName();
+    
+            $fileFoto->move(ROOTPATH . 'public/img/', $namaFoto);
+        }
+        $password = password_hash($this->request->getVar('password_walimurid'), PASSWORD_DEFAULT);
+
+        $data = [
+            'username_walimurid' => $this->request->getVar('username_walimurid'),
+            'password_walimurid' => $password,
+            'email_walimurid' => $this->request->getVar('email_walimurid'),
+            'nama_walimurid' => $this->request->getVar('nama_walimurid'),
+            'nisn_murid' => $this->request->getVar('nisn_murid'),
+            'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
+            'foto_profile' => $namaFoto,
+        ];
+
+        $this->walimuridModel->updateWalimurid($id, $data);
+
+        session()->setFlashdata('add', 'Data walimurid berhasil dibuat');
+        return redirect()->to('/walimurid2');
+
+            }
+        else
+        {
+            // validation failed, show errors to the user
+            $data = [
+                'title' => 'Edit Walimurid',
+                'errors' => $validation->getErrors(),
+                'walimurid' => $this->walimuridModel->getWM($id)
+                ];
+            return view('/admin/walimurid/edit', $data);
+        }
+    }
 }

@@ -10,6 +10,14 @@ class WalimuridModel extends Model
     protected $allowedFields    = ["id_walimurid","username_walimurid","password_walimurid","email_walimurid","nama_walimurid","nisn_murid","jenis_kelamin","foto_profile"];
 
 
+    public function getWM($id_walimurid = false)
+    {
+        if ($id_walimurid == false) {
+            return $this->findAll();
+          }
+          return $this->where (['id_walimurid' => $id_walimurid])->first();
+    }
+
     public function getWalimurid($id_walimurid = false)
     {
         if ($id_walimurid == false) {
@@ -38,5 +46,12 @@ class WalimuridModel extends Model
         $query = $this->db->table($this->table)->delete(array('id_walimurid' => $id));
         return $query;
         $this->db->enableForeignKeyChecks();
+    }
+
+    public function updateWalimurid($id, $data)
+    {
+        $this->where('id_walimurid', $id)
+             ->set($data)
+             ->update();
     }
 }

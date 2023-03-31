@@ -85,4 +85,16 @@ class Auth extends BaseController
         session()->destroy();
         return redirect()->to('/login');
     }
+
+    public function profile_admin($id)
+    {
+        $adminModel = new AdminModel();
+
+        $data = [
+            'title' => "Profil Admin",
+            'admin' => $adminModel->getAdmin($id)
+        ];
+
+        return view("/admin/profile");
+    }
 }
