@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class MuridModel extends Model
 {
     protected $table            = 'murid';
+    protected $primaryKey       = 'nisn';
     protected $allowedFields    = ["nisn","username_murid","password_murid","email_murid","nama_murid","kelas","jenis_kelamin","foto_profile"];
 
     public function getMurid($nisn = false)
@@ -19,9 +20,12 @@ class MuridModel extends Model
   
     public function updateMurid($id, $data)
     {
+      $this->db->disableForeignKeyChecks();
         $this->where('nisn', $id)
              ->set($data)
              ->update();
+      $this->db->enableForeignKeyChecks();
+
     }
 
     public function search($keyword)

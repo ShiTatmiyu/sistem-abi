@@ -1,0 +1,145 @@
+INFO - 2023-04-01 05:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-01 07:35:32 --> mysqli_sql_exception: Unknown column 'murid.id' in 'where clause' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '123456789')
+#6 C:\xampp\htdocs\sistem-abi\app\Controllers\Auth.php(533): CodeIgniter\BaseModel->find('123456789')
+#7 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Auth->update_profile_murid('123456789')
+#8 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-04-01 07:35:32 --> Unknown column 'murid.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `murid`
+WHERE `murid`.`id` = \'123456789\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `murid`
+WHERE `murid`.`id` = \'123456789\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `murid`
+WHERE `murid`.`id` = \'123456789\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `murid`
+WHERE `murid`.`id` = :murid.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '123456789')
+ 7 APPPATH\Controllers\Auth.php(533): CodeIgniter\BaseModel->find('123456789')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->update_profile_murid('123456789')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-04-01 07:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-01 07:37:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_absen_ibadah`.`walimurid`, CONSTRAINT `walimurid_nisn_murid_foreign` FOREIGN KEY (`nisn_murid`) REFERENCES `murid` (`nisn`)) in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `walimur...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `walimur...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `walimur...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `walimur...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\sistem-abi\system\Model.php(756): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\sistem-abi\app\Models\WalimuridModel.php(55): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\sistem-abi\app\Controllers\Auth.php(687): App\Models\WalimuridModel->updateWalimurid('1', Array)
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Auth->update_profile_walimurid('1')
+#10 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-04-01 07:37:54 --> Cannot add or update a child row: a foreign key constraint fails (`db_absen_ibadah`.`walimurid`, CONSTRAINT `walimurid_nisn_murid_foreign` FOREIGN KEY (`nisn_murid`) REFERENCES `murid` (`nisn`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `walimurid` SET `username_walimurid` = \'parent03\', `password_walimurid` = \'$2y$10$3ZYO/3Nm6vAq6z/UgNtj8eJNKrsG50.dqQ82W4Gqaljvg7mdP8keO\', `email_walimurid` = \'hehe@gmail.com\', `nama_walimurid` = \'Arlechino\', `nisn_murid` = NULL, `jenis_kelamin` = \'Perempuan\', `foto_profile` = \'user.png\'
+WHERE `id_walimurid` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `walimurid` SET `username_walimurid` = \'parent03\', `password_walimurid` = \'$2y$10$3ZYO/3Nm6vAq6z/UgNtj8eJNKrsG50.dqQ82W4Gqaljvg7mdP8keO\', `email_walimurid` = \'hehe@gmail.com\', `nama_walimurid` = \'Arlechino\', `nisn_murid` = NULL, `jenis_kelamin` = \'Perempuan\', `foto_profile` = \'user.png\'
+WHERE `id_walimurid` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `walimurid` SET `username_walimurid` = \'parent03\', `password_walimurid` = \'$2y$10$3ZYO/3Nm6vAq6z/UgNtj8eJNKrsG50.dqQ82W4Gqaljvg7mdP8keO\', `email_walimurid` = \'hehe@gmail.com\', `nama_walimurid` = \'Arlechino\', `nisn_murid` = NULL, `jenis_kelamin` = \'Perempuan\', `foto_profile` = \'user.png\'
+WHERE `id_walimurid` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `walimurid` SET `username_walimurid` = :username_walimurid:, `password_walimurid` = :password_walimurid:, `email_walimurid` = :email_walimurid:, `nama_walimurid` = :nama_walimurid:, `nisn_murid` = :nisn_murid:, `jenis_kelamin` = :jenis_kelamin:, `foto_profile` = :foto_profile:
+WHERE `id_walimurid` = :id_walimurid:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Models\WalimuridModel.php(55): CodeIgniter\Model->update()
+ 9 APPPATH\Controllers\Auth.php(687): App\Models\WalimuridModel->updateWalimurid('1', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->update_profile_walimurid('1')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-04-01 07:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-01 07:39:47 --> mysqli_sql_exception: Unknown column 'walimurid.id' in 'where clause' in C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sistem-abi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sistem-abi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sistem-abi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sistem-abi\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistem-abi\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\sistem-abi\app\Controllers\Auth.php(689): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(934): App\Controllers\Auth->update_profile_walimurid('1')
+#8 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\sistem-abi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sistem-abi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sistem-abi\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-04-01 07:39:47 --> Unknown column 'walimurid.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `walimurid`
+WHERE `walimurid`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `walimurid`
+WHERE `walimurid`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `walimurid`
+WHERE `walimurid`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `walimurid`
+WHERE `walimurid`.`id` = :walimurid.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Auth.php(689): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->update_profile_walimurid('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sistem-abi\\public\\index.php')
+INFO - 2023-04-01 07:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-01 07:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

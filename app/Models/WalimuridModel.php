@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class WalimuridModel extends Model
 {
     protected $table            = 'walimurid';
+    protected $primaryKey       = 'id_walimurid';
     protected $allowedFields    = ["id_walimurid","username_walimurid","password_walimurid","email_walimurid","nama_walimurid","nisn_murid","jenis_kelamin","foto_profile"];
 
 
@@ -50,8 +51,10 @@ class WalimuridModel extends Model
 
     public function updateWalimurid($id, $data)
     {
+        $this->db->disableForeignKeyChecks();
         $this->where('id_walimurid', $id)
              ->set($data)
              ->update();
+        $this->db->enableForeignKeyChecks();
     }
 }

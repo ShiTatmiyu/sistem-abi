@@ -41,6 +41,13 @@ class GuruModel extends Model
       $query = $this->db->table($this->table)->delete(array('id_guru' => $id));
       return $query;
     }
+
+    public function updateGuru($id, $data)
+    {
+        $this->where('id_guru', $id)
+             ->set($data)
+             ->update();
+    }
 }
 
 

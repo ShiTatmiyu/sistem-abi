@@ -41,6 +41,13 @@ class AdminModel extends Model
       $query = $this->db->table($this->table)->delete(array('id_admin' => $id));
       return $query;
   }
+
+  public function updateAdmin($id, $data)
+  {
+      $this->where('id_admin', $id)
+           ->set($data)
+           ->update();
+  }
 }
 
 
