@@ -122,7 +122,7 @@ class Admin extends BaseController
     public function edit_ibadah($id)
     {
         $data = [
-            'title' => 'Edit Admin',
+            'title' => 'Edit Ibadah',
             'validation' => \Config\Services::validation(),
             'ibadah' => $this->ibadahModel->getIbadah($id)
         ];

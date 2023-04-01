@@ -43,10 +43,22 @@ $routes->get('/murid/dashboard', 'Murid::index', ['filter' => 'MuridFilter']);
 $routes->get('/walimurid/dashboard', 'Walimurid::index', ['filter' => 'WalimuridFilter']);
 
 // User Profile Route
-$routes->get('/admin-profil/$id', 'Auth::profile_admin/$1' ,['filter' => 'AdminFilter']);
-$routes->get('/guru-profil/$id', 'Auth::profile_guru/$1' ,['filter' => 'GuruFilter']);
-$routes->get('/murid-profil/$id', 'Auth::profile_murid/$1' ,['filter' => 'MuridFilter']);
-$routes->get('/walimurid-profil/$id', 'Auth::profile_walimurid/$1' ,['filter' => 'WalimuridFilter']);
+$routes->get('/admin-profil/(:any)', 'Auth::profile_admin/$1' ,['filter' => 'AdminFilter']);
+$routes->get('/guru-profil/(:any)', 'Auth::profile_guru/$1' ,['filter' => 'GuruFilter']);
+$routes->get('/murid-profil/(:any)', 'Auth::profile_murid/$1' ,['filter' => 'MuridFilter']);
+$routes->get('/walimurid-profil/(:any)', 'Auth::profile_walimurid/$1' ,['filter' => 'WalimuridFilter']);
+
+// User Edit Profile Route
+$routes->get('/editprofadm/(:any)', 'Auth::edit_profile_admin/$1' ,['filter' => 'AdminFilter']);
+$routes->get('/editprofgr/(:any)', 'Auth::edit_profile_guru/$1' ,['filter' => 'GuruFilter']);
+$routes->get('/editprofmr/(:any)', 'Auth::edit_profile_murid/$1' ,['filter' => 'MuridFilter']);
+$routes->get('/editprofwm/(:any)', 'Auth::edit_profile_walimurid/$1' ,['filter' => 'WalimuridFilter']);
+
+// User Update Profile Route
+$routes->post('/updateprofadm/(:any)', 'Auth::update_profile_admin/$1');
+$routes->post('/updateprofgr/(:any)', 'Auth::update_profile_guru/$1' ,['filter' => 'GuruFilter']);
+$routes->post('/updateprofmr/(:any)', 'Auth::update_profile_murid/$1' ,['filter' => 'MuridFilter']);
+$routes->post('/updateprofwm/(:any)', 'Auth::update_profile_walimurid/$1' ,['filter' => 'WalimuridFilter']);
 
 // Admin User Create Route
 $routes->get('/admin/create', 'Admin::create_admin', ['filter' => 'AdminFilter']);

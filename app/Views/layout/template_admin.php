@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     <li class="item">
-                        <a href="/profil/<?= session('user_id') ?>" class="menu-btn">
+                        <a href="/admin-profil/<?= session('user_id') ?>" class="menu-btn">
                         <i class="fa-solid fa-cog"></i><span>Profil</span>
                         </a>
                     </li>
