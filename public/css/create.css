@@ -6,6 +6,11 @@
     margin-top: 10px;
 }
 
+.input-row {
+    margin-bottom: 20px;
+    border-bottom: 2px solid gray;
+}
+
 .form-input {
     width: 600px;
     height: 40px;
@@ -17,6 +22,28 @@
 
 .title-page {
     font-size: 15;
+}
+
+.ok-btn {
+    background-color: limegreen;
+    color: whitesmoke;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.text-box {
+    font-size: 20px;
+    display: inline;
+}
+
+.check-box {
+    width: 20px;
+    margin-left: 10px;
+}
+
+input.check-box {
+    width: 15px;
+    height: 15px;
 }
 
 .file-input {

@@ -1,15 +1,16 @@
 <?= $this->extend('layout/template_murid'); ?>
 <?= $this->section('content'); ?>
+<link rel="stylesheet" href="/css/create.css">
 
-<h1>Isi Absen</h1>
+<h1 style="margin-bottom: 30px;">Isi Absen</h1>
 <form action="/absen/store" method="post">
     <?php foreach($absen as $ab) { ?>
         <div class="input-row">
-            <td><?= $ab['nama_ibadah'] ?></td>
-            <td><input type="checkbox" name="absen[<?= $ab['id_ibadah'] ?>][present]" value="1"></td>
+            <td><p class="text-box"><?= $ab['nama_ibadah'] ?></p></td>
+            <td><input class="check-box" type="checkbox" name="absen[<?= $ab['id_ibadah'] ?>][present]" value="1"></td>
         </div>
     <?php } ?>
-    <button type="submit">Kirim</button>
+    <button class="ok-btn" type="submit">Kirim</button>
 </form>
 
 <?= $this->endSection(); ?>

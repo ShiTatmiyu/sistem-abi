@@ -6,7 +6,25 @@
     transition: 0.3s;
 }
 
-.t-black {color: black;}
+.t-black {
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.photo {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 200px;
+    max-width: 200px;
+    clip-path: circle();
+}
+
+.col-icon {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 70px;
+}
 
 .account {
     margin-top: 20px;

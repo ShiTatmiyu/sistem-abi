@@ -261,7 +261,7 @@ class Auth extends BaseController
     public function edit_profile_guru($id)
     {
         $data = [
-            'title' => 'Edit guru',
+            'title' => 'Edit Profil',
             'validation' => \Config\Services::validation(),
             'guru' => $this->guruModel->getguru($id)
         ];
@@ -364,7 +364,6 @@ class Auth extends BaseController
         $password = password_hash($this->request->getVar('password_guru'), PASSWORD_DEFAULT);
 
         $data = [
-            'id_guru' => $id,
             'username_guru' => $this->request->getVar('username_guru'),
             'password_guru' => $password,
             'email_guru' => $this->request->getVar('email_guru'),
@@ -528,7 +527,7 @@ class Auth extends BaseController
             'foto_profile' => $namaFoto,
         ];
 
-        $this->guruModel->updateGuru($id, $data);
+        $this->muridModel->updateMurid($id, $data);
 
         $murid = $this->muridModel->find($id);
 
@@ -563,7 +562,7 @@ class Auth extends BaseController
 
         $data = [
             'title' => "Profil walimurid",
-            'walimurid' => $walimuridModel->getWM($id)
+            'walimurid' => $walimuridModel->getWalimurid($id)
         ];
 
         return view("/walimurid/profile", $data);
@@ -679,7 +678,6 @@ class Auth extends BaseController
             'password_walimurid' => $password,
             'email_walimurid' => $this->request->getVar('email_walimurid'),
             'nama_walimurid' => $this->request->getVar('nama_walimurid'),
-            'nisn_murid' => $this->request->getVar('nisn_murid'),
             'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
             'foto_profile' => $namaFoto,
         ];

@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template_admin'); ?>
 <?= $this->section('content'); ?>
-<link rel="stylesheet" href="/css/data_admin.css">
 
+<link rel="stylesheet" href="/css/data_admin.css">
 
 <h1 class="page-title">Data Murid</h1>
 <div class="d-flex">

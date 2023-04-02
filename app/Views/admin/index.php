@@ -40,7 +40,7 @@
             </div>
         </div>
     </a>
-    <a href="/data2" class="col col-data">
+    <a href="/ibadahad2" class="col col-data">
         <div class="col-content">
             <i class="col-icon fa-solid fa-mosque"></i>
             <div>

@@ -1,0 +1,52 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+}
+
+.card-img {
+    flex: 0 0 100px;
+    height: 100%;
+    object-fit: cover;
+    max-width: 500px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 20px;
+    flex: 1;
+    margin-bottom: 5px;
+}
+
+.btn {
+    text-align: center;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: auto;
+}
+
+.btn:hover {
+    border: 2px solid gray;
+    color: gray;
+}
