@@ -250,14 +250,6 @@ class Admin extends BaseController
                     'required' => 'Jenis Kelamin perlu diisi'
                 ]
             ],
-            'foto_profile' => [
-                'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]',
-                'errors' => [
-                    'is_image' => 'Data yang diisi buka foto',
-                    // 'mime_in' => 'Tipe data tidak diizinkan'              
-                ]
-            ],
         ]);
         if ($validation->withRequest($this->request)->run())
         {
@@ -363,14 +355,6 @@ class Admin extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Jenis Kelamin perlu diisi'
-                ]
-            ],
-            'foto_profile' => [
-                'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]',
-                'errors' => [
-                    'is_image' => 'Data yang diisi buka foto',
-                    // 'mime_in' => 'Tipe data tidak diizinkan'              
                 ]
             ],
         ]);
@@ -497,14 +481,6 @@ class Admin extends BaseController
                     'required' => 'Jenis Kelamin perlu diisi'
                 ]
             ],
-            'foto_profile' => [
-                'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]',
-                'errors' => [
-                    'is_image' => 'Data yang diisi buka foto',
-                    // 'mime_in' => 'Tipe data tidak diizinkan'              
-                ]
-            ],
         ]);
         if ($validation->withRequest($this->request)->run())
         {
@@ -613,14 +589,6 @@ class Admin extends BaseController
                     'required' => 'Jenis Kelamin perlu diisi'
                 ]
             ],
-            'foto_profile' => [
-                'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]',
-                'errors' => [
-                    'is_image' => 'Data yang diisi buka foto',
-                    // 'mime_in' => 'Tipe data tidak diizinkan'              
-                ]
-            ],
         ]);
         if ($validation->withRequest($this->request)->run())
         {
@@ -636,7 +604,7 @@ class Admin extends BaseController
     
             $password = password_hash($this->request->getVar('password_murid'), PASSWORD_DEFAULT);
 
-            $this->muridModel->save([
+            $data = [
                 'nisn' => $this->request->getVar('nisn'),
                 'username_murid' => $this->request->getVar('username_murid'),
                 'password_murid' => $password,
@@ -645,8 +613,10 @@ class Admin extends BaseController
                 'kelas' => $this->request->getVar('kelas'),
                 'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
                 'foto_profile' => $namaFoto,
-            ]);
+            ];
     
+            $this->muridModel->crt($data);
+
             session()->setFlashdata('add', 'Data murid berhasil dibuat');
             return redirect()->to('/murid2');
     
@@ -661,6 +631,7 @@ class Admin extends BaseController
             return view('/admin/murid/create', $data);
         }
     }
+
     public function create_walimurid()
     {
         $data = [
@@ -721,14 +692,6 @@ class Admin extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Jenis Kelamin perlu diisi'
-                ]
-            ],
-            'foto_profile' => [
-                'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]',
-                'errors' => [
-                    'is_image' => 'Data yang diisi buka foto',
-                    // 'mime_in' => 'Tipe data tidak diizinkan'              
                 ]
             ],
         ]);
@@ -919,14 +882,6 @@ class Admin extends BaseController
                     'required' => 'Jenis Kelamin perlu diisi'
                 ]
             ],
-            'foto_profile' => [
-                'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]',
-                'errors' => [
-                    'is_image' => 'Data yang diisi buka foto',
-                    // 'mime_in' => 'Tipe data tidak diizinkan'              
-                ]
-            ],
         ]);
 
         if ($validation->withRequest($this->request)->run())
@@ -1084,14 +1039,6 @@ class Admin extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Jenis Kelamin perlu diisi'
-                ]
-            ],
-            'foto_profile' => [
-                'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]',
-                'errors' => [
-                    'is_image' => 'Data yang diisi buka foto',
-                    // 'mime_in' => 'Tipe data tidak diizinkan'              
                 ]
             ],
         ]);
@@ -1266,14 +1213,6 @@ class Admin extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Jenis Kelamin perlu diisi'
-                ]
-            ],
-            'foto_profile' => [
-                'label' => 'Foto Profil',
-                'rules' => 'is_image[foto_profil]',
-                'errors' => [
-                    'is_image' => 'Data yang diisi buka foto',
-                    // 'mime_in' => 'Tipe data tidak diizinkan'              
                 ]
             ],
         ]);

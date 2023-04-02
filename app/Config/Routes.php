@@ -75,17 +75,17 @@ $routes->get('/walimurid2', 'Admin::index_walimurid', ['filter' => 'AdminFilter'
 $routes->get('/ibadahad2', 'Admin::index_ibadah', ['filter' => 'AdminFilter']);
 
 // Admin User Detail
-$routes->get('admin/detail/(:any)', 'admin::detail_admin/$1', ['filter' => 'AdminFilter']);
-$routes->get('guru/detail/(:any)', 'admin::detail_guru/$1', ['filter' => 'AdminFilter']);
-$routes->get('murid/detail/(:any)', 'admin::detail_murid/$1', ['filter' => 'AdminFilter']);
-$routes->get('walimurid/detail/(:any)', 'admin::detail_walimurid/$1', ['filter' => 'AdminFilter']);
+$routes->get('/admin/detail/(:any)', 'admin::detail_admin/$1', ['filter' => 'AdminFilter']);
+$routes->get('/guru/detail/(:any)', 'admin::detail_guru/$1', ['filter' => 'AdminFilter']);
+$routes->get('/murid/detail/(:any)', 'admin::detail_murid/$1', ['filter' => 'AdminFilter']);
+$routes->get('/walimurid/detail/(:any)', 'admin::detail_walimurid/$1', ['filter' => 'AdminFilter']);
 
 // Admin User Store
-$routes->post('admin/store', 'admin::save_admin', ['filter' => 'AdminFilter']);
-$routes->post('ibadah/store', 'admin::save_ibadah', ['filter' => 'AdminFilter']);
-$routes->post('guru/store', 'admin::save_guru', ['filter' => 'AdminFilter']);
-$routes->post('murid/store', 'admin::save_murid', ['filter' => 'AdminFilter']);
-$routes->post('walimurid/store', 'admin::save_walimurid', ['filter' => 'AdminFilter']);
+$routes->post('/admin/store', 'admin::save_admin', ['filter' => 'AdminFilter']);
+$routes->post('/ibadah/store', 'admin::save_ibadah', ['filter' => 'AdminFilter']);
+$routes->post('/guru/store', 'admin::save_guru', ['filter' => 'AdminFilter']);
+$routes->post('/murid/store', 'admin::save_murid', ['filter' => 'AdminFilter']);
+$routes->post('/walimurid/store', 'admin::save_walimurid', ['filter' => 'AdminFilter']);
 
 // Admin User Edit
 $routes->get('/editadm/(:segment)', 'admin::edit_adm/$1', ['filter' => 'AdminFilter']);

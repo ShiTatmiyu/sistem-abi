@@ -1,5 +1,6 @@
 <?= $this->extend('layout/template_admin'); ?>
 <?= $this->section('content'); ?>
+
 <link rel="stylesheet" href="/css/create.css">
         
         <h1 class="title-page">Tambah Murid</h1>

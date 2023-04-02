@@ -28,6 +28,13 @@ class MuridModel extends Model
 
     }
 
+    public function crt($data)
+    {
+      $this->db->disableForeignKeyChecks();
+        $this->insert($data);
+      $this->db->enableForeignKeyChecks();
+    }
+
     public function search($keyword)
     {
       // $builder = $this->table('buku');
@@ -48,6 +55,7 @@ class MuridModel extends Model
     {
         $this->db->disableForeignKeyChecks();
         $query = $this->db->table($this->table)->delete(array('nisn' => $id));
+        $query = $this->db->table('walimurid')->delete(array('nisn_murid' => $id));
         return $query;
         $this->db->enableForeignKeyChecks();
     }
